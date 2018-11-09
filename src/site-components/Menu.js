@@ -9,6 +9,7 @@ export const Menu = ({className = "", ...props}) => (
         <p><a href={routes.homePage}>Home</a></p>
         <p><a href={routes.loadersPage}>Loaders</a></p>
         <p><a href={routes.messagesPage}>Messages</a></p>
+        <p><a href={routes.tablesPage}>Tables</a></p>
         <p><a href={routes.typographyPage}>Typography</a></p>
     </aside>
 );

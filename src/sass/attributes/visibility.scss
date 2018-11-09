@@ -20,7 +20,7 @@
 }
 
 @each $name, $size in $mediaQueries {
-    @media (min-width: $size) {
+    @media (max-width: $size) {
         .hide-#{$name}{
             @include vanish();
         }

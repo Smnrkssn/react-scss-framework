@@ -69,8 +69,6 @@ ${pages.map((page, i) => {
 module.exports = async () => {
     const pages = fs.readdirSync(`${global.PROJECT_ROOT}/src/pages`);
 
-    console.log(getMenu(pages));
-
     return new Promise(resolve => {
         fs.writeFile(`${global.PROJECT_ROOT}/src/routes.js`, getRoutesFile(pages), (err) => {
             if(err) throw err;

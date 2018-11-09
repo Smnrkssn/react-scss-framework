@@ -4,5 +4,6 @@ export const routes = {
     homePage: "/",
     loadersPage: "/loaders",
     messagesPage: "/messages",
+    tablesPage: "/tables",
     typographyPage: "/typography"
 };

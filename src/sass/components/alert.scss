@@ -34,7 +34,7 @@ body.alert-rendered {
         max-width: 100%;
         border-radius: 10px;
         z-index: 1001;
-        transition: .3s ease-out;
+        transition: .2s ease-out;
 
         &.alert-visible {
             transform: scale(1);
@@ -99,7 +99,7 @@ body.alert-rendered {
         padding: 1em;
         opacity: 0;
         background-color: rgba(0,0,0,.85);
-        transition: .3s ease-out;
+        transition: .2s ease-out;
         z-index: 1000;
 
         &.alert-visible {

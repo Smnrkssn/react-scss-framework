@@ -1,17 +1,39 @@
 import React, {Component} from "react";
 import {Page} from "../site-components/Page";
 import {Loader} from "../components/Loader";
+import {colors} from "../services/colors";
 
 class LoadersPage extends Component {
     render() {
         return (
             <Page>
-                <h3>Loaders</h3>
-                <Loader size="huge"/>
-                <Loader size="large"/>
-                <Loader size="medium"/>
-                <Loader size="small"/>
-                <Loader size="tiny"/>
+                {colors.map((color, i) => (
+                    <div key={i}>
+                        <h3>{color}</h3>
+                        <div className="columns">
+                            <div className="column">
+                                <h4>Huge:</h4>
+                                <Loader size="huge" className={color}/>
+                            </div>
+                            <div className="column">
+                                <h4>Large:</h4>
+                                <Loader size="large" className={color}/>
+                            </div>
+                            <div className="column">
+                                <h4>Medium:</h4>
+                                <Loader size="medium" className={color}/>
+                            </div>
+                            <div className="column">
+                                <h4>Small:</h4>
+                                <Loader size="small" className={color}/>
+                            </div>
+                            <div className="column">
+                                <h4>Tiny:</h4>
+                                <Loader size="tiny" className={color}/>
+                            </div>
+                        </div>
+                    </div>
+                ))}
             </Page>
         );
     }

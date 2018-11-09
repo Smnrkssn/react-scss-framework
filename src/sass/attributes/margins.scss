@@ -35,7 +35,7 @@
     }
 
     .mb-#{$i}{
-        margin-bottom: #{$i}px;
+        margin-bottom: #{$i}px!important;
     }
 
     .ml-#{$i}{

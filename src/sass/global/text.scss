@@ -13,9 +13,13 @@ p {
     margin-bottom: $divider4;
 }
 
-p, input, span, tr, cite {
+p, input, span, cite {
     margin-top: 0;
     font-size: $h5;
+}
+
+table {
+    font-size: $h6;
 }
 
 ul, ol {
