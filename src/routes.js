@@ -1,7 +1,8 @@
 export const routes = {
-    homePage: "/",
     alertsPage: "/alerts",
-    messagesPage: "/messages",
     buttonsPage: "/buttons",
+    homePage: "/",
+    loadersPage: "/loaders",
+    messagesPage: "/messages",
     typographyPage: "/typography"
 };

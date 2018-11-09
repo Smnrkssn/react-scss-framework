@@ -2,11 +2,11 @@ import React, {Component} from "react";
 import {Page} from "../site-components/Page";
 import {Loader} from "../components/Loader";
 
-class HomePage extends Component {
+class LoadersPage extends Component {
     render() {
         return (
             <Page>
-                Home
+                <h3>Loaders</h3>
                 <Loader size="huge"/>
                 <Loader size="large"/>
                 <Loader size="medium"/>
@@ -17,4 +17,4 @@ class HomePage extends Component {
     }
 }
 
-export default HomePage;
+export default LoadersPage;

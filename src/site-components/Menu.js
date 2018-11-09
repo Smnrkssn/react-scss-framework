@@ -4,10 +4,11 @@ import {joinClassNames} from "../services/className";
 
 export const Menu = ({className = "", ...props}) => (
     <aside className={joinClassNames("container-secondary color-white", className)} {...props}>
-        <p><a href={routes.homePage}>Home</a></p>
-        <p><a href={routes.typographyPage}>Typography</a></p>
-        <p><a href={routes.alertsPage}>Alert</a></p>
-        <p><a href={routes.messagesPage}>Message</a></p>
+        <p><a href={routes.alertsPage}>Alerts</a></p>
         <p><a href={routes.buttonsPage}>Buttons</a></p>
+        <p><a href={routes.homePage}>Home</a></p>
+        <p><a href={routes.loadersPage}>Loaders</a></p>
+        <p><a href={routes.messagesPage}>Messages</a></p>
+        <p><a href={routes.typographyPage}>Typography</a></p>
     </aside>
 );

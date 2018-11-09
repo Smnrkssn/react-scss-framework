@@ -3,7 +3,7 @@ import {render} from "react-dom";
 import {Provider} from "react-redux";
 import {initStore} from "./redux/store";
 import "./sass/style.scss";
-import * as serviceWorker from "./components/serviceWorker";
+import * as serviceWorker from "./serviceWorker";
 import {Router} from "./Router";
 import $ from "jquery";
 
