@@ -1,0 +1,33 @@
+.columns {
+    display: flex;
+}
+
+.column {
+    padding: $divider3;
+    flex-basis: 0;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+@for $i from 0 through 16 {
+    .column-#{$i}{
+        @extend .column;
+        flex: none;
+        width: 100% / 16 * $i;
+    }
+
+    @media (max-width: $mediaSmall) {
+        .column-#{$i}{
+            width: inherit;
+        }
+    }
+}
+
+@media (max-width: $mediaSmall) {
+    .columns {
+        display: block;
+        margin-left: -$divider3;
+        margin-right: -$divider3;
+        margin-top: -$divider3;
+    }
+}
