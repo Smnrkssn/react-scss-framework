@@ -2,6 +2,14 @@
  * List Table
  *----------------------------------------*/
 .list-table {
+    &.clickable {
+        @include clickable();
+    }
+
+    &.striped {
+        @include striped();
+    }
+
     td {
         padding: 10px 10px 0 0;
         white-space: nowrap;

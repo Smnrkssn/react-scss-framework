@@ -6,10 +6,16 @@
     margin: 0;
     text-align: center;
 
+    &.sortable {
+        @include sortable();
+    }
+
+    &.clickable {
+        @include clickable();
+    }
+
     &.striped {
-        tr:nth-child(2n) td {
-            background-color: $tablePrimary;
-        }
+        @include striped();
     }
 
     th {

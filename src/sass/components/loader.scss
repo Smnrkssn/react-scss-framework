@@ -5,9 +5,13 @@
     border-radius: 50%;
     animation: loader-spin 1s linear infinite;
 
+    &.dark {
+        border-color: rgba(0, 0, 0, .3);
+    }
+
     @each $name, $color in $darkColors {
         &.#{$name} {
-            border-top-color: $color!important;
+            border-top-color: $color;
         }
     }
 

@@ -7,6 +7,10 @@
     width: 100%;
     text-align: center;
 
+    &.clickable {
+        @include clickable();
+    }
+
     thead {
         display: none;
     }
@@ -14,6 +18,10 @@
     tbody {
         width: auto;
         display: block;
+    }
+
+    tr:nth-child(2n) td {
+        background-color: #FFF;
     }
 
     tr {
