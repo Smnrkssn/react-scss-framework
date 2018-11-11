@@ -17,14 +17,22 @@ class FormsPage extends Component {
                     </Menu>
                 )))}
                 <h2 className="mt-30">Vertical Menus</h2>
-                <Menu vertical>
+                <Menu vertical className="gray">
                     <a href="#page">Item 1</a>
                     <a href="#page">Item 2</a>
                     <a href="#page">Item 3</a>
                     <a href="#page">Item 4</a>
                 </Menu>
-                <h2 className="mt-30">Vertical Inline Menu</h2>
-                <Menu vertical inline className="mb-15">
+                <h2 className="mt-30">Inline Menus</h2>
+                <div>
+                    <Menu inline className={`vertical-sm inline-sm gray mb-7`}>
+                        <a href="#page">Item 1</a>
+                        <a href="#page">Item 2</a>
+                        <a href="#page">Item 3</a>
+                        <a href="#page">Item 4</a>
+                    </Menu>
+                </div>
+                <Menu vertical inline className="gray">
                     <a href="#page">Item 1</a>
                     <a href="#page">Item 2</a>
                     <a href="#page">Item 3</a>

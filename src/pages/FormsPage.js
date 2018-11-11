@@ -26,13 +26,6 @@ class FormsPage extends Component {
                 {colors.map((color, i) => (
                     <AndroidCheckbox id={`checkbox-${i}`} className={color} defaultChecked={true} key={i}/>
                 ))}
-                <h2>Menu</h2>
-                <nav className="menu">
-                    <a href="#page">Item 1</a>
-                    <a href="#page">Item 2</a>
-                    <a href="#page">Item 3</a>
-                    <a href="#page">Item 4</a>
-                </nav>
             </Page>
         );
     }

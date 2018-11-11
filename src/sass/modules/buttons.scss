@@ -3,6 +3,7 @@
  *----------------------------------------*/
 .button {
     display: inline-block;
+    position: relative;
     cursor: pointer;
     outline: 0;
     border: none;
@@ -16,6 +17,30 @@
     &:disabled {
         cursor: not-allowed;
     }
+
+    &.loading {
+        content: "";
+        cursor: not-allowed;
+        color: transparent;
+        user-select: none;
+
+        &:after {
+            position: absolute;
+            left: calc(50% - (1em / 2));
+            top: calc(50% - (1em / 2));
+            animation: spinAround .5s infinite linear;
+            border: 2px solid #FFF;
+            border-radius: 100%;
+            border-right-color: transparent;
+            border-top-color: transparent;
+            content: "";
+            display: block;
+            height: 1em;
+            width: 1em;
+        }
+    }
+
+    @include standardHoverEffect();
 }
 
 @each $name, $color in $darkColors {
@@ -25,19 +50,41 @@
         color: $white;
 
         &:disabled {
-            background-color: lighten($color, 5%);
+            background-color: lighten($color, 25%);
         }
 
-        &.inverted {
+        &:hover:not(:disabled):not(.loading) {
+            background-color: darken($color, 8%);
+            color: $white;
+        }
+
+        &.outlined {
             background-color: rgba(0, 0, 0, 0);
             border: 2px solid $color;
             color: $color;
             font-weight: bold;
             @include standardHoverEffect();
 
-            &:hover {
+            &.loading {
+                content: "";
+                cursor: not-allowed;
+                color: transparent;
+
+                &:after {
+                    border: 2px solid $color;
+                    border-right-color: transparent;
+                    border-top-color: transparent;
+                }
+            }
+
+            &:hover:not(:disabled):not(.loading) {
                 background-color: $color;
                 color: $white;
+            }
+
+            &:disabled {
+                border: 2px solid lighten($color, 25%);
+                color: lighten($color, 25%);
             }
         }
     }
@@ -52,5 +99,13 @@
         &:disabled {
             background-color: darken($color, .5);
         }
+    }
+}
+
+@keyframes spinAround {
+    from {
+        transform: rotate(0);
+    } to {
+        transform:rotate(359deg);
     }
 }
