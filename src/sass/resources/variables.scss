@@ -152,9 +152,9 @@ $mediaXXSmall : 0;
 
 // 6.1 Media Query Map
 $mediaQueries: (
-        (lg  $mediaLarge)
-        (md  $mediaMedium)
-        (sm  $mediaSmall)
-        (xs  $mediaXSmall)
-        (xxs $mediaXXSmall)
+    (lg  $mediaLarge)
+    (md  $mediaMedium)
+    (sm  $mediaSmall)
+    (xs  $mediaXSmall)
+    (xxs $mediaXXSmall)
 );

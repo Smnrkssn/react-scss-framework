@@ -9,18 +9,18 @@ const decapitalizeFirstLetter = (string = "") => {
 const getMenu = (pages) => (
 `import React from "react";
 import {routes} from "../routes";
-import {joinClassNames} from "../services/className";
+import {Menu} from "../components/Menu";
 
-export const Menu = ({className = "", ...props}) => (
-    <aside className={joinClassNames("container-secondary color-white", className)} {...props}>
+export const MainMenu = ({className = "", ...props}) => (
+    <Menu vertical className="b-dark-gray" {...props}>
 ${pages.map((page, i) => {
     const href = `routes.${decapitalizeFirstLetter(page).split(".js")[0]}`;
     const pageName = page.split("Page.js")[0];
     const lastPage = i === pages.length - 1;
     
-    return `        <p><a href={${href}}>${pageName}</a></p>${lastPage ? "" : "\n"}`;
+    return `        <a href={${href}}>${pageName}</a>${lastPage ? "" : "\n"}`;
 }).reduce((acc, next) => acc + next)}
-    </aside>
+    </Menu>
 );`
 );
 
@@ -81,7 +81,7 @@ module.exports = async () => {
             resolve();
         })
     })).then(() => new Promise(resolve => {
-        fs.writeFile(`${global.PROJECT_ROOT}/src/site-components/Menu.js`, getMenu(pages), (err) => {
+        fs.writeFile(`${global.PROJECT_ROOT}/src/site-components/MainMenu.js`, getMenu(pages), (err) => {
             if(err) throw err;
 
             console.log("Complete!");

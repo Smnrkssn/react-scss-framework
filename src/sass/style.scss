@@ -8,8 +8,7 @@
 
 //import modules
 @import "modules/buttons.scss";
-@import "modules/container.scss";
-@import "modules/inputs.scss";
+@import "modules/form.scss";
 @import "modules/message.scss";
 @import "modules/overlay.scss";
 @import "modules/columns.scss";
@@ -24,6 +23,7 @@
 @import "components/loader.scss";
 @import "components/tables/index.scss";
 @import "components/checkboxes/index.scss";
+@import "components/menu.scss";
 
 //import attributes
 @import "attributes/colors.scss";
@@ -37,6 +37,7 @@
 @import "attributes/positioning.scss";
 @import "attributes/visibility.scss";
 @import "attributes/wrappers.scss";
+@import "attributes/containers.scss";
 
 //import site-modules
 

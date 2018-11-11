@@ -1,0 +1,65 @@
+/*----------------------------------------
+ * Menu
+ *----------------------------------------*/
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+
+    .menu-item {
+        padding: 8px 16px;
+    }
+
+    &.vertical {
+        flex-direction: column;
+    }
+
+    &.inline {
+        display: inline-flex;
+    }
+
+    a {
+        padding: 8px 16px;
+
+        &:hover,
+        &:active {
+            background-color: darken(#fff, 10%);
+            color: inherit;
+        }
+    }
+}
+
+@each $name, $query in $mediaQueries {
+    @media (max-width: $query) {
+        .vertical-#{$name}{
+            flex-direction: column;
+        }
+
+        .inline-#{$name} {
+            display: inline-flex;
+        }
+    }
+}
+
+@each $name, $color in $darkColors {
+    .menu.#{$name} {
+        background-color: $color;
+        color: #FFF;
+
+        a:hover,
+        a:active {
+            background-color: darken($color, 10%);
+        }
+    }
+}
+
+@each $name, $color in $lightColors {
+    .menu.#{$name} {
+        background-color: $color;
+        color: #000;
+
+        a:hover,
+        a:active {
+            background-color: darken($color, 5%);
+        }
+    }
+}

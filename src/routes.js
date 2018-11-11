@@ -2,11 +2,12 @@ export const routes = {
     alertsPage: "/alerts",
     blockquotePage: "/blockquote",
     buttonsPage: "/buttons",
-    checkboxesPage: "/checkboxes",
     codePage: "/code",
+    formsPage: "/forms",
     headingPage: "/heading",
     homePage: "/",
     loadersPage: "/loaders",
+    menusPage: "/menus",
     messagesPage: "/messages",
     tablesPage: "/tables"
 };
