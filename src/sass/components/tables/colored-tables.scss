@@ -22,6 +22,7 @@
             }
         }
 
+        &.table.collapse,
         &.stacked-table  {
             tr {
                 padding: 0;
@@ -66,6 +67,7 @@
                 background-color: darken($color, 13%);
             }
 
+            &.table.collapse,
             &.stacked-table  {
                 tr:nth-child(2n) td {
                     background-color: $color;

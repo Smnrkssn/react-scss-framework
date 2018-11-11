@@ -4,7 +4,7 @@ import {Menu} from "./Menu";
 export const Page = ({children, ...props}) => (
     <div className="columns" {...props}>
         <div className="column-4 p-0 hide-md">
-            <Menu className="column-4" style={{
+            <Menu className="column-3" style={{
                 position: "fixed",
                 height: "100vh",
                 overflowY: "auto"

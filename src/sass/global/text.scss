@@ -32,6 +32,6 @@ a {
     color: inherit;
 
     &:hover {
-        color: darken($primary, 10%);
+        color: $primary;
     }
 }
