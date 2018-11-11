@@ -42,26 +42,26 @@ class TablesPage extends Component {
                 <SortableTable className="mb-30">
                     <thead>
                         <tr>
-                            <th>Heading 1</th>
+                            <th className="no-sort">Heading 1</th>
                             <th>Heading 2</th>
                             <th>Heading 3</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td>Data 2</td>
-                            <td>Data 1</td>
-                            <td>Data 3</td>
-                        </tr>
-                        <tr>
-                            <td>Data 1</td>
-                            <td>Data 2</td>
-                            <td>Data 3</td>
+                    <tbody className="head">
+                        <tr className="head">
+                            <td className="head">Data 2</td>
+                            <td>12</td>
+                            <td>Female</td>
                         </tr>
                         <tr>
                             <td>Data 3</td>
+                            <td>17</td>
+                            <td>Male</td>
+                        </tr>
+                        <tr>
                             <td>Data 1</td>
-                            <td>Data 2</td>
+                            <td>37</td>
+                            <td>Female</td>
                         </tr>
                     </tbody>
                 </SortableTable>
