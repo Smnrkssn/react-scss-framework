@@ -7,7 +7,6 @@ const Segment = ({
     light = false,
     glass = false,
     inset = false,
-    attached = false,
     hero = false,
     children,
     ...props

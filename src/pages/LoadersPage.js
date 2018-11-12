@@ -35,23 +35,23 @@ class LoadersPage extends Component {
                         <div className="columns">
                             <div className="column">
                                 <h4>Huge:</h4>
-                                <Loader size="huge" className={`${color} dark`}/>
+                                <Loader size="huge" className={`${color} inverted`}/>
                             </div>
                             <div className="column">
                                 <h4>Large:</h4>
-                                <Loader size="large" className={`${color} dark`}/>
+                                <Loader size="large" className={`${color} inverted`}/>
                             </div>
                             <div className="column">
                                 <h4>Medium:</h4>
-                                <Loader size="medium" className={`${color} dark`}/>
+                                <Loader size="medium" className={`${color} inverted`}/>
                             </div>
                             <div className="column">
                                 <h4>Small:</h4>
-                                <Loader size="small" className={`${color} dark`}/>
+                                <Loader size="small" className={`${color} inverted`}/>
                             </div>
                             <div className="column">
                                 <h4>Tiny:</h4>
-                                <Loader size="tiny" className={`${color} dark`}/>
+                                <Loader size="tiny" className={`${color} inverted`}/>
                             </div>
                         </div>
                     </div>

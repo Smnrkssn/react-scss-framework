@@ -10,7 +10,22 @@
     }
 
     .menu-item {
+        font-weight: lighter;
         padding: 16px;
+        margin: 0;
+
+        &:hover,
+        &:active,
+        &.active {
+            background-color: #eee;
+        }
+
+        &.effectless {
+            &:hover,
+            &:active {
+                background-color: inherit!important;
+            }
+        }
     }
 
     &.vertical {
@@ -21,15 +36,12 @@
         display: inline-flex;
     }
 
-    a {
-        padding: 16px;
+    > a {
+        @extend .menu-item;
+    }
 
-        &:hover,
-        &:active,
-        &.active {
-            background-color: #eee;
-            color: inherit;
-        }
+    a:hover {
+        color: inherit;
     }
 }
 
@@ -50,9 +62,12 @@
         background-color: $color;
         color: #FFF;
 
-        a:hover,
-        a:active,
-        a.active {
+        > a:hover,
+        > a:active,
+        > a.active,
+        .menu-item:hover,
+        .menu-item:active,
+        .menu-item.active {
             background-color: darken($color, 10%);
         }
     }
@@ -63,9 +78,12 @@
         background-color: $color;
         color: #000;
 
-        a:hover,
-        a:active,
-        a.active {
+        > a:hover,
+        > a:active,
+        > a.active,
+        .menu-item:hover,
+        .menu-item:active,
+        .menu-item.active {
             background-color: darken($color, 5%);
         }
     }

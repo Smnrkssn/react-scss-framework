@@ -5,13 +5,19 @@
     border-radius: 50%;
     animation: loader-spin 1s linear infinite;
 
-    &.dark {
-        border-color: rgba(0, 0, 0, .3);
+    &.inverted {
+        border-color: $primary;
+        border-top-color: transparent;
     }
 
     @each $name, $color in $darkColors {
         &.#{$name} {
             border-top-color: $color;
+
+            &.inverted {
+                border-color: $color;
+                border-top-color: transparent;
+            }
         }
     }
 

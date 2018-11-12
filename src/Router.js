@@ -3,7 +3,6 @@ import {BrowserRouter, Route} from "react-router-dom";
 import AlertsPage from "./pages/AlertsPage";
 import BlockquotePage from "./pages/BlockquotePage";
 import ButtonsPage from "./pages/ButtonsPage";
-import CodePage from "./pages/CodePage";
 import FormsPage from "./pages/FormsPage";
 import HeadingPage from "./pages/HeadingPage";
 import HeroPage from "./pages/HeroPage";
@@ -22,7 +21,6 @@ export const Router = () => {
                 <Route exact path={routes.alertsPage} component={AlertsPage}/>
                 <Route exact path={routes.blockquotePage} component={BlockquotePage}/>
                 <Route exact path={routes.buttonsPage} component={ButtonsPage}/>
-                <Route exact path={routes.codePage} component={CodePage}/>
                 <Route exact path={routes.formsPage} component={FormsPage}/>
                 <Route exact path={routes.headingPage} component={HeadingPage}/>
                 <Route exact path={routes.heroPage} component={HeroPage}/>

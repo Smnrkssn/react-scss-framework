@@ -14,19 +14,32 @@ import {joinClassNames} from "../services/className";
 import {withRouter} from 'react-router-dom';
 
 class MainMenu extends Component {
+    withoutRouterExtras = ({history, match, staticContext, ...props}) => props;
+
     render(){
-        const {className, history, location, match, staticContext, ...props} = this.props;
+        const {
+            className,
+            location,
+            ...props
+        } = this.withoutRouterExtras(this.props);
         
         return (
             <Menu vertical className={joinClassNames("b-dark-gray", className)} {...props}>
-${pages.map((page, i) => {
+                <h3 className="effectless menu-item">
+                    <a href={routes.homePage}>
+                        SCSS Framework
+                    </a>
+                </h3>
+${pages.filter(page => page !== "HomePage.js").map((page, i) => {
     const href = `routes.${decapitalizeFirstLetter(page).split(".js")[0]}`;
     const pageName = page.split("Page.js")[0];
-    const lastPage = i === pages.length - 1;
+    const lastPage = i === pages.length - 2;
+    const tab = `                `;
     
-    return (`                ` + 
-        `<a href={${href}} className={location.pathname === ${href} ? "active" : ""}>` + 
-        `${pageName}</a>${lastPage ? "" : "\n"}`
+    return (tab + 
+        `<a href={${href}} \n` + 
+        `${tab}   className={location.pathname === ${href} ? "active" : ""}>\n` + 
+        `${tab}    ${pageName}\n${tab}</a>${lastPage ? "" : "\n"}`
     );
 }).reduce((acc, next) => acc + next)}
             </Menu>
