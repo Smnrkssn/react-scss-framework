@@ -28,6 +28,11 @@
         box-shadow: 0 2px 25px 0 rgba(34,36,38,.05) inset;
     }
 
+    &.hero {
+        padding: 48px;
+        width: 100%;
+    }
+
     &.inline {
         display: inline-block;
     }
@@ -35,7 +40,6 @@
 
 @each $name, $color in $darkColors {
     .segment.#{$name} {
-        @extend .segment;
         background-color: $color;
         color: #FFF;
 
@@ -61,7 +65,6 @@
 
 @each $name, $color in $lightColors {
     .segment.#{$name} {
-        @extend .segment;
         background-color: $color;
 
         &.glass {

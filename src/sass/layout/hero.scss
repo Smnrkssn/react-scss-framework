@@ -1,0 +1,30 @@
+/*----------------------------------------
+ * Hero
+ *----------------------------------------*/
+.hero {
+    padding: 48px;
+    width: 100%;
+}
+
+@each $name, $color in $darkColors {
+    .hero.#{$name} {
+        background-color: $color;
+        color: #FFF;
+
+        &.light {
+            @if $name == black {
+                background-color: lighten($color, 75%);
+                color: #000;
+            } @else {
+                background-color: lighten($color, 40%);
+                color: #000;
+            }
+        }
+    }
+}
+
+@each $name, $color in $lightColors {
+    .hero.#{$name} {
+        background-color: $color;
+    }
+}

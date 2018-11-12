@@ -3,7 +3,11 @@
  *----------------------------------------*/
 .menu {
     display: flex;
-    flex-wrap: wrap;
+    font-weight: lighter;
+
+    &:not(.vertical){
+        flex-wrap: wrap;
+    }
 
     .menu-item {
         padding: 16px;

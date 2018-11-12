@@ -6,6 +6,7 @@ import ButtonsPage from "./pages/ButtonsPage";
 import CodePage from "./pages/CodePage";
 import FormsPage from "./pages/FormsPage";
 import HeadingPage from "./pages/HeadingPage";
+import HeroPage from "./pages/HeroPage";
 import HomePage from "./pages/HomePage";
 import LoadersPage from "./pages/LoadersPage";
 import MenusPage from "./pages/MenusPage";
@@ -24,6 +25,7 @@ export const Router = () => {
                 <Route exact path={routes.codePage} component={CodePage}/>
                 <Route exact path={routes.formsPage} component={FormsPage}/>
                 <Route exact path={routes.headingPage} component={HeadingPage}/>
+                <Route exact path={routes.heroPage} component={HeroPage}/>
                 <Route exact path={routes.homePage} component={HomePage}/>
                 <Route exact path={routes.loadersPage} component={LoadersPage}/>
                 <Route exact path={routes.menusPage} component={MenusPage}/>

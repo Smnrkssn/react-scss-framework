@@ -8,6 +8,7 @@ const Segment = ({
     glass = false,
     inset = false,
     attached = false,
+    hero = false,
     children,
     ...props
 }) => {
@@ -16,7 +17,8 @@ const Segment = ({
         "inline": inline,
         "light": light,
         "glass": glass,
-        "inset": inset
+        "inset": inset,
+        "hero": hero
     }, className);
 
     return (
