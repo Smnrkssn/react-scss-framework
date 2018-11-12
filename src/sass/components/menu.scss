@@ -21,8 +21,9 @@
         padding: 16px;
 
         &:hover,
-        &:active {
-            background-color: darken(#fff, 10%);
+        &:active,
+        &.active {
+            background-color: #eee;
             color: inherit;
         }
     }
@@ -46,7 +47,8 @@
         color: #FFF;
 
         a:hover,
-        a:active {
+        a:active,
+        a.active {
             background-color: darken($color, 10%);
         }
     }
@@ -58,7 +60,8 @@
         color: #000;
 
         a:hover,
-        a:active {
+        a:active,
+        a.active {
             background-color: darken($color, 5%);
         }
     }

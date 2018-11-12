@@ -14,7 +14,7 @@ export const AndroidCheckbox = ({
     label = "",
     ...props
 }) => (
-    <label htmlFor={id} className={joinClassNames("android-checkbox", className)}>
+    <label htmlFor={id} className={joinClassNames("android-checkbox clearfix", className)}>
         <input id={id} type="checkbox" {...props}/>
         <div className="inner">
             <svg width="20px" height="20px" viewBox="0 0 20 20">

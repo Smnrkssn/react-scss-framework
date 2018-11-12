@@ -1,3 +1,6 @@
+/*----------------------------------------
+ * Columns
+ *----------------------------------------*/
 .columns {
     display: flex;
 }
@@ -26,6 +29,5 @@
 @media (max-width: $mediaSmall) {
     .columns {
         display: block;
-
     }
 }

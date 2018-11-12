@@ -23,9 +23,11 @@ class FormsPage extends Component {
                     ))}
                 </div>
                 <h2>Android Checkboxes</h2>
-                {colors.map((color, i) => (
-                    <AndroidCheckbox id={`checkbox-${i}`} className={color} defaultChecked={true} key={i}/>
-                ))}
+                <div className="columns">
+                    {colors.map((color, i) => (
+                        <AndroidCheckbox id={`checkbox-${i}`} className={`${color} clearfix`} defaultChecked={true} key={i}/>
+                    ))}
+                </div>
             </Page>
         );
     }

@@ -10,6 +10,7 @@ import HomePage from "./pages/HomePage";
 import LoadersPage from "./pages/LoadersPage";
 import MenusPage from "./pages/MenusPage";
 import MessagesPage from "./pages/MessagesPage";
+import SegmentsPage from "./pages/SegmentsPage";
 import TablesPage from "./pages/TablesPage";
 import {routes} from "./routes";
 
@@ -27,6 +28,7 @@ export const Router = () => {
                 <Route exact path={routes.loadersPage} component={LoadersPage}/>
                 <Route exact path={routes.menusPage} component={MenusPage}/>
                 <Route exact path={routes.messagesPage} component={MessagesPage}/>
+                <Route exact path={routes.segmentsPage} component={SegmentsPage}/>
                 <Route exact path={routes.tablesPage} component={TablesPage}/>
             </Fragment>
         </BrowserRouter>

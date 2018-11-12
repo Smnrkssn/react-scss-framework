@@ -1,0 +1,71 @@
+/*----------------------------------------
+ * Segment
+ *----------------------------------------*/
+.segment-list {
+    > .segment {
+        border-radius: 0 0 2px 2px;
+
+        &:first-child {
+            border-radius: 2px 2px 0 0;
+        }
+    }
+}
+
+.segment {
+    position: relative;
+    padding: 24px;
+    border-radius: 2px;
+    box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2);
+    background-color: #FFF;
+
+    hr {
+        margin: 24px 0;
+        border-top: 1px solid #ddd;
+    }
+
+    &.inset {
+        border: 1px solid rgba(34,36,38,.15);
+        box-shadow: 0 2px 25px 0 rgba(34,36,38,.05) inset;
+    }
+
+    &.inline {
+        display: inline-block;
+    }
+}
+
+@each $name, $color in $darkColors {
+    .segment.#{$name} {
+        @extend .segment;
+        background-color: $color;
+        color: #FFF;
+
+        &:not(.inset){
+            box-shadow: 0 0 0 1px rgba(darken($color, 25%),.15), 0 2px 3px rgba(darken($color, 25%), .2);
+        }
+
+        &.light {
+            @if $name == black {
+                background-color: lighten($color, 75%);
+                color: #000;
+            } @else {
+                background-color: lighten($color, 40%);
+                color: #000;
+            }
+        }
+
+        &.glass {
+            background-color: rgba($color, .9);
+        }
+    }
+}
+
+@each $name, $color in $lightColors {
+    .segment.#{$name} {
+        @extend .segment;
+        background-color: $color;
+
+        &.glass {
+            background-color: rgba($color, .9);
+        }
+    }
+}

@@ -7,11 +7,8 @@
 @import "resources/variables.scss";
 
 //import modules
-@import "modules/buttons.scss";
-@import "modules/form.scss";
-@import "modules/message.scss";
-@import "modules/overlay.scss";
-@import "modules/columns.scss";
+@import "layout/segment.scss";
+@import "layout/columns.scss";
 
 //import global
 @import "global/index.scss";
@@ -24,6 +21,10 @@
 @import "components/tables/index.scss";
 @import "components/checkboxes/index.scss";
 @import "components/menu.scss";
+@import "components/buttons.scss";
+@import "components/form.scss";
+@import "components/overlay.scss";
+
 
 //import attributes
 @import "attributes/colors.scss";
@@ -40,4 +41,4 @@
 @import "attributes/containers.scss";
 
 //import site-modules
-
+@import "site-modules/global.scss";

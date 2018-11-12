@@ -9,5 +9,6 @@ export const routes = {
     loadersPage: "/loaders",
     menusPage: "/menus",
     messagesPage: "/messages",
+    segmentsPage: "/segments",
     tablesPage: "/tables"
 };

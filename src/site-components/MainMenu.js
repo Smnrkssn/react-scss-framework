@@ -14,6 +14,7 @@ export const MainMenu = ({className = "", ...props}) => (
         <a href={routes.loadersPage}>Loaders</a>
         <a href={routes.menusPage}>Menus</a>
         <a href={routes.messagesPage}>Messages</a>
+        <a href={routes.segmentsPage}>Segments</a>
         <a href={routes.tablesPage}>Tables</a>
     </Menu>
 );

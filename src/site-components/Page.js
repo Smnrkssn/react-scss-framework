@@ -1,5 +1,6 @@
 import React from "react";
 import {MainMenu} from "./MainMenu";
+import Segment from "../components/Segment";
 
 export const Page = ({children, ...props}) => (
     <div id="page" className="columns" {...props}>
@@ -12,9 +13,9 @@ export const Page = ({children, ...props}) => (
             }}/>
         </div>
         <section className="column">
-            <div className="wrapper-3">
+            <Segment className="wrapper-3">
                 {children}
-            </div>
+            </Segment>
         </section>
     </div>
 );

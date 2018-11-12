@@ -48,6 +48,12 @@ class ButtonsPage extends Component {
                         {color} button
                     </button>
                 ))}
+                <h3 className="mt-30">Segment Buttons</h3>
+                {colors.map((color, i) => (
+                    <button key={i} className={`button-${color} segment mb-15 mr-15`}>
+                        {color} button
+                    </button>
+                ))}
             </Page>
         );
     }
