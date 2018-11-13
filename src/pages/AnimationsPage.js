@@ -5,7 +5,7 @@ import {Animation} from "../components/Animation";
 
 class AnimationsPage extends Component {
     state = {
-        animation: "fadeIn",
+        animation: "",
         animationKey: 0
     };
 

@@ -29,7 +29,7 @@ class MainMenu extends Component {
                 vertical
                 breakpoint="md"
                 containerProps={{
-                    className: "fixed-md w-25 w-100-md b-dark-gray h-100 h-0-md"
+                    className: "scrollable fixed-md w-25 w-100-md b-dark-gray h-100 h-0-md"
                 }}
                 mobileMenuProps={{
                     className: joinClassNames("b-dark-gray w-100-md", className)

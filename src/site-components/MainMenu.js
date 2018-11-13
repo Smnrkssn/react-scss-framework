@@ -20,7 +20,7 @@ class MainMenu extends Component {
                 vertical
                 breakpoint="md"
                 containerProps={{
-                    className: "fixed-md w-25 w-100-md b-dark-gray h-100 h-0-md"
+                    className: "scrollable fixed-md w-25 w-100-md b-dark-gray h-100 h-0-md"
                 }}
                 mobileMenuProps={{
                     className: joinClassNames("b-dark-gray w-100-md", className)
@@ -54,10 +54,6 @@ class MainMenu extends Component {
                    className={location.pathname === routes.formsPage ? "active" : ""}>
                     Forms
                 </a>
-                <a href={routes.headingPage} 
-                   className={location.pathname === routes.headingPage ? "active" : ""}>
-                    Heading
-                </a>
                 <a href={routes.heroPage} 
                    className={location.pathname === routes.heroPage ? "active" : ""}>
                     Hero
@@ -74,6 +70,10 @@ class MainMenu extends Component {
                    className={location.pathname === routes.messagesPage ? "active" : ""}>
                     Messages
                 </a>
+                <a href={routes.progressPage} 
+                   className={location.pathname === routes.progressPage ? "active" : ""}>
+                    Progress
+                </a>
                 <a href={routes.segmentsPage} 
                    className={location.pathname === routes.segmentsPage ? "active" : ""}>
                     Segments
@@ -81,6 +81,10 @@ class MainMenu extends Component {
                 <a href={routes.tablesPage} 
                    className={location.pathname === routes.tablesPage ? "active" : ""}>
                     Tables
+                </a>
+                <a href={routes.typographyPage} 
+                   className={location.pathname === routes.typographyPage ? "active" : ""}>
+                    Typography
                 </a>
             </HidingMenu>
         );

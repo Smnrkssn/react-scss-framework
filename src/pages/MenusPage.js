@@ -4,7 +4,7 @@ import {colors} from "../services/colors";
 import {Menu} from "../components/Menu";
 import HidingMenu from "../components/HidingMenu";
 
-class FormsPage extends Component {
+class MenusPage extends Component {
     render(){
         return (
             <Page>
@@ -76,4 +76,4 @@ class FormsPage extends Component {
     }
 }
 
-export default FormsPage;
+export default MenusPage;
