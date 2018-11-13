@@ -13,7 +13,7 @@
     &.fixed {
         position: fixed;
         top: 0;
-        z-index: 9999;
+        z-index: 1000;
         max-height: 100vh;
         overflow: auto;
     }
@@ -84,7 +84,7 @@
         .fixed-#{$name} {
             position: fixed;
             top: 0;
-            z-index: 9999;
+            z-index: 1000;
             max-height: 100vh;
             overflow: auto;
         }

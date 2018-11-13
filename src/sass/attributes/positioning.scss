@@ -86,7 +86,11 @@
         @include normalizePosition();
     }
 
-    @media(min-width: $size){
+    @media(max-width: $size){
+        .static-#{$name}{
+            position: static!important;
+        }
+
         .position-bottom-#{$name}{
             @include positionBottom();
         }

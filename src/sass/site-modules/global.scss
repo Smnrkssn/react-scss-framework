@@ -3,17 +3,20 @@ body {
 }
 
 #main-menu {
-    width: 250px;
     min-height: 100vh;
 }
 
 @media (max-width: $mediaMedium) {
     body {
-        padding-top: 50px;
+        padding-top: 48px;
     }
 
     #main-menu {
         width: 100%;
         min-height: inherit;
+    }
+
+    .columns .column {
+        padding: 0;
     }
 }

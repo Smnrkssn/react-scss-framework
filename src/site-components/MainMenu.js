@@ -20,13 +20,13 @@ class MainMenu extends Component {
                 vertical
                 breakpoint="md"
                 containerProps={{
-                    className: "fixed-md w-100-md"
+                    className: "fixed-md w-25 w-100-md b-dark-gray h-100 h-0-md"
                 }}
                 mobileMenuProps={{
                     className: joinClassNames("b-dark-gray w-100-md", className)
                 }}
                 mobileMenuItemClass="grow"
-                className={joinClassNames("b-dark-gray", className)}
+                className={joinClassNames("fixed static-md w-25", className)}
                 {...props}
             >
                 <h3 className="effectless menu-item">

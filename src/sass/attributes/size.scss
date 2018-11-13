@@ -17,6 +17,10 @@ $sizeList: (0 25 50 75 100);
             .w-#{nth($sizeList, $i)}-#{$name}{
                 width: unquote("#{nth($sizeList, $i)}%");
             }
+
+            .h-#{nth($sizeList, $i)}-#{$name}{
+                min-height: #{nth($sizeList, $i)}vh!important;
+            }
         }
     }
 }

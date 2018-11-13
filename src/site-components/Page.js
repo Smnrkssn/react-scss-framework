@@ -6,7 +6,7 @@ export const Page = ({children, ...props}) => (
     <div id="page" {...props}>
         <div className="columns block-md">
             <MainMenu/>
-            <div className="column padder-2">
+            <div className="column">
                 <Segment>
                     {children}
                 </Segment>

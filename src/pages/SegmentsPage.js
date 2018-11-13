@@ -49,7 +49,7 @@ class SegmentsPage extends Component {
                     </Segment>
                 ))}
                 <h3 className="mt-30">Horizontal Rules</h3>
-                <Segment>
+                <Segment className="primary">
                     Part 1
                     <hr/>
                     Part 2
