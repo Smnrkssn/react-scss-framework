@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import {Page} from "../site-components/Page";
 import {colors} from "../services/colors";
 import {Menu} from "../components/Menu";
+import HidingMenu from "../components/HidingMenu";
 
 class FormsPage extends Component {
     render(){
@@ -14,6 +15,12 @@ class FormsPage extends Component {
                         <a href="#page">Item 2</a>
                         <a href="#page">Item 3</a>
                         <a href="#page">Item 4</a>
+                        <a href="#page">Item 5</a>
+                        <a href="#page">Item 6</a>
+                        <a href="#page">Item 7</a>
+                        <a href="#page">Item 8</a>
+                        <a href="#page">Item 9</a>
+                        <a href="#page">Item 10</a>
                     </Menu>
                 )))}
                 <h2 className="mt-30">Vertical Menus</h2>
@@ -22,6 +29,12 @@ class FormsPage extends Component {
                     <a href="#page">Item 2</a>
                     <a href="#page">Item 3</a>
                     <a href="#page">Item 4</a>
+                    <a href="#page">Item 5</a>
+                    <a href="#page">Item 6</a>
+                    <a href="#page">Item 7</a>
+                    <a href="#page">Item 8</a>
+                    <a href="#page">Item 9</a>
+                    <a href="#page">Item 10</a>
                 </Menu>
                 <h2 className="mt-30">Inline Menus</h2>
                 <div>
@@ -38,6 +51,26 @@ class FormsPage extends Component {
                     <a href="#page">Item 3</a>
                     <a href="#page">Item 4</a>
                 </Menu>
+                <h2 className="mt-30">Nested Menus</h2>
+                <Menu className={`vertical-sm secondary mb-7`}>
+                    <a href="#page">Item 1</a>
+                    <a href="#page">Item 2</a>
+                    <a href="#page">Item 3</a>
+                    <a href="#page">Item 4</a>
+                    <Menu right className={`vertical-sm`}>
+                        <a href="#page">Item 1</a>
+                        <a href="#page">Item 2</a>
+                        <a href="#page">Item 3</a>
+                        <a href="#page">Item 4</a>
+                    </Menu>
+                </Menu>
+                <h2 className="mt-30">Hiding Menu</h2>
+                <HidingMenu>
+                    <a href="#page">Item 1</a>
+                    <a href="#page">Item 2</a>
+                    <a href="#page">Item 3</a>
+                    <a href="#page">Item 4</a>
+                </HidingMenu>
             </Page>
         );
     }

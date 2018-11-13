@@ -117,7 +117,7 @@ class AlertContent extends Component {
                             : null}
                         <button
                             id={confirmButtonId}
-                            className="button-primary"
+                            className="button-secondary"
                             autoFocus
                             disabled={this.state.disabled}
                             onClick={(event) => {

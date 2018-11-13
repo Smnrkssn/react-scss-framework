@@ -2,6 +2,7 @@
  * Menu
  *----------------------------------------*/
 .menu {
+    position: relative;
     display: flex;
     font-weight: lighter;
 
@@ -9,7 +10,16 @@
         flex-wrap: wrap;
     }
 
+    &.fixed {
+        position: fixed;
+        top: 0;
+        z-index: 9999;
+        max-height: 100vh;
+        overflow: auto;
+    }
+
     .menu-item {
+        cursor: pointer;
         font-weight: lighter;
         padding: 16px;
         margin: 0;
@@ -21,10 +31,16 @@
         }
 
         &.effectless {
+            cursor: default;
+
             &:hover,
             &:active {
                 background-color: inherit!important;
             }
+        }
+
+        &.grow {
+            flex-grow: 1;
         }
     }
 
@@ -43,6 +59,16 @@
     a:hover {
         color: inherit;
     }
+
+    &.right {
+        flex-grow: 1;
+        justify-content: flex-end;
+    }
+
+    &.center {
+        flex-grow: 1;
+        justify-content: center;
+    }
 }
 
 @each $name, $query in $mediaQueries {
@@ -53,6 +79,14 @@
 
         .inline-#{$name} {
             display: inline-flex;
+        }
+
+        .fixed-#{$name} {
+            position: fixed;
+            top: 0;
+            z-index: 9999;
+            max-height: 100vh;
+            overflow: auto;
         }
     }
 }
@@ -69,6 +103,9 @@
         .menu-item:active,
         .menu-item.active {
             background-color: darken($color, 10%);
+            @if $name == black {
+                background-color: lighten($color, 10%);
+            }
         }
     }
 }

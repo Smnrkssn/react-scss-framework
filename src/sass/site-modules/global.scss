@@ -1,3 +1,19 @@
 body {
     background-color: #f9f9f9;
 }
+
+#main-menu {
+    width: 250px;
+    min-height: 100vh;
+}
+
+@media (max-width: $mediaMedium) {
+    body {
+        padding-top: 50px;
+    }
+
+    #main-menu {
+        width: 100%;
+        min-height: inherit;
+    }
+}

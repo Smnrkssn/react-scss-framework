@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import {routes} from "../routes";
-import {Menu} from "../components/Menu";
+import HidingMenu from "../components/HidingMenu";
 import {joinClassNames} from "../services/className";
 import {withRouter} from 'react-router-dom';
 
@@ -15,7 +15,20 @@ class MainMenu extends Component {
         } = this.withoutRouterExtras(this.props);
         
         return (
-            <Menu vertical className={joinClassNames("b-dark-gray", className)} {...props}>
+            <HidingMenu
+                id="main-menu"
+                vertical
+                breakpoint="md"
+                containerProps={{
+                    className: "fixed-md w-100-md"
+                }}
+                mobileMenuProps={{
+                    className: joinClassNames("b-dark-gray w-100-md", className)
+                }}
+                mobileMenuItemClass="grow"
+                className={joinClassNames("b-dark-gray", className)}
+                {...props}
+            >
                 <h3 className="effectless menu-item">
                     <a href={routes.homePage}>
                         SCSS Framework
@@ -65,7 +78,7 @@ class MainMenu extends Component {
                    className={location.pathname === routes.tablesPage ? "active" : ""}>
                     Tables
                 </a>
-            </Menu>
+            </HidingMenu>
         );
     }
 }
