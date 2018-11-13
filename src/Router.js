@@ -2,7 +2,6 @@ import React, {Fragment} from "react";
 import {BrowserRouter, Route} from "react-router-dom";
 import AlertsPage from "./pages/AlertsPage";
 import AnimationsPage from "./pages/AnimationsPage";
-import BlockquotePage from "./pages/BlockquotePage";
 import ButtonsPage from "./pages/ButtonsPage";
 import FormsPage from "./pages/FormsPage";
 import HeroPage from "./pages/HeroPage";
@@ -22,7 +21,6 @@ export const Router = () => {
             <Fragment>
                 <Route exact path={routes.alertsPage} component={AlertsPage}/>
                 <Route exact path={routes.animationsPage} component={AnimationsPage}/>
-                <Route exact path={routes.blockquotePage} component={BlockquotePage}/>
                 <Route exact path={routes.buttonsPage} component={ButtonsPage}/>
                 <Route exact path={routes.formsPage} component={FormsPage}/>
                 <Route exact path={routes.heroPage} component={HeroPage}/>
