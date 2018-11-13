@@ -21,7 +21,7 @@ export const Button = ({
     }, className);
 
     return (
-        <button className={buttonClass} {...props}>
+        <button disabled={disabled} className={buttonClass} {...props}>
             {children}
         </button>
     );

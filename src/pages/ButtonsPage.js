@@ -56,6 +56,24 @@ class ButtonsPage extends Component {
                         {color} button
                     </Button>
                 ))}
+                <h3 className="mt-30">Loading Segment Buttons</h3>
+                {colors.map((color, i) => (
+                    <Button segment loading key={i} className={`${color} mb-15 mr-15`}>
+                        {color} button
+                    </Button>
+                ))}
+                <h3 className="mt-30">Disabled Segment Buttons</h3>
+                {colors.map((color, i) => (
+                    <Button segment disabled key={i} className={`${color} mb-15 mr-15`}>
+                        {color} button
+                    </Button>
+                ))}
+                <h3 className="mt-30">Segment Message Buttons</h3>
+                {colors.map((color, i) => (
+                    <Button segment message key={i} className={`${color} mb-15 mr-15`}>
+                        {color} button
+                    </Button>
+                ))}
             </Page>
         );
     }

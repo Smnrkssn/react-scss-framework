@@ -4,6 +4,7 @@ import AlertsPage from "./pages/AlertsPage";
 import AnimationsPage from "./pages/AnimationsPage";
 import ArticlePage from "./pages/ArticlePage";
 import ButtonsPage from "./pages/ButtonsPage";
+import ColumnsPage from "./pages/ColumnsPage";
 import FormsPage from "./pages/FormsPage";
 import HeroPage from "./pages/HeroPage";
 import HomePage from "./pages/HomePage";
@@ -24,6 +25,7 @@ export const Router = () => {
                 <Route exact path={routes.animationsPage} component={AnimationsPage}/>
                 <Route exact path={routes.articlePage} component={ArticlePage}/>
                 <Route exact path={routes.buttonsPage} component={ButtonsPage}/>
+                <Route exact path={routes.columnsPage} component={ColumnsPage}/>
                 <Route exact path={routes.formsPage} component={FormsPage}/>
                 <Route exact path={routes.heroPage} component={HeroPage}/>
                 <Route exact path={routes.homePage} component={HomePage}/>

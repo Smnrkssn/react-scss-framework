@@ -27,7 +27,6 @@ class MainMenu extends Component {
                 }}
                 mobileMenuItemClass="grow"
                 className={joinClassNames("fixed static-md w-25", className)}
-                style={{paddingBottom: "80px"}}
                 {...props}
             >
                 <h3 className="effectless menu-item">
@@ -50,6 +49,10 @@ class MainMenu extends Component {
                 <a href={routes.buttonsPage} 
                    className={location.pathname === routes.buttonsPage ? "active" : ""}>
                     Buttons
+                </a>
+                <a href={routes.columnsPage} 
+                   className={location.pathname === routes.columnsPage ? "active" : ""}>
+                    Columns
                 </a>
                 <a href={routes.formsPage} 
                    className={location.pathname === routes.formsPage ? "active" : ""}>

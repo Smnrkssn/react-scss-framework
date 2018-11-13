@@ -11,7 +11,7 @@ class TypographyPage extends Component {
                     <div className="column">
                         <Segment.List>
                             <Segment>
-                                <h2>Typography</h2>
+                                <h2 className="mb-0">Typography</h2>
                             </Segment>
                             <Segment>
                                 <h2>Headings</h2>

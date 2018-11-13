@@ -3,31 +3,54 @@
  *----------------------------------------*/
 .columns {
     display: flex;
-}
+    flex-wrap: wrap;
 
-.column {
-    padding: $divider3;
-    flex-basis: 0;
-    flex-grow: 1;
-    flex-shrink: 1;
+    .column {
+        padding: $divider3;
+        flex-basis: 0;
+        flex-grow: 1;
+        flex-shrink: 1;
+    }
+
+    &.breakpoint {
+        @each $name, $size in $mediaQueries {
+            @media (max-width: $size) {
+                &.#{$name}{
+                    display: block;
+                    .column {
+                        width: inherit;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @for $i from 0 through 16 {
-    .column-#{$i}{
-        @extend .column;
-        flex: none;
-        width: 100% / 16 * $i;
-    }
-
-    @media (max-width: $mediaSmall) {
+    .columns {
         .column-#{$i}{
-            width: inherit;
+            @extend .column;
+            flex: none;
+            width: 100% / 16 * $i;
+        }
+
+        @media (max-width: $mediaSmall) {
+            .column-#{$i}{
+                width: inherit;
+            }
+
+            &.unstackable,
+            &.breakpoint {
+                .column-#{$i}{
+                    width: 100% / 16 * $i;
+                }
+            }
         }
     }
 }
 
 @media (max-width: $mediaSmall) {
-    .columns {
+    .columns:not(.unstackable):not(.breakpoint) {
         display: block;
     }
 }
