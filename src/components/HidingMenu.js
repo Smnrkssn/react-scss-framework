@@ -48,7 +48,6 @@ class HidingMenu extends Component {
             [`hide-${breakpoint}`]: true,
             [`vertical-${breakpoint}`]: true,
             [`w-100-${breakpoint}`]: true,
-            "pb-30": this.state.showMenu,
             "show": this.state.showMenu
         }, className);
 

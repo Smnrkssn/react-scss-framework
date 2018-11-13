@@ -27,6 +27,7 @@ class MainMenu extends Component {
                 }}
                 mobileMenuItemClass="grow"
                 className={joinClassNames("fixed static-md w-25", className)}
+                style={{paddingBottom: "80px"}}
                 {...props}
             >
                 <h3 className="effectless menu-item">
