@@ -7,7 +7,8 @@ class TablesPage extends Component {
     render() {
         return (
             <Page>
-                <h3>Tables</h3>
+                <h2>Tables</h2>
+                <hr/>
                 <div>
                     <table className={`table striped sortable clickable mb-30`}>
                         <thead>

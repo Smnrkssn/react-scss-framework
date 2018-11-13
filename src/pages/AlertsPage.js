@@ -1,56 +1,58 @@
 import React, {Component} from "react";
 import {Page} from "../site-components/Page";
 import AlertOptionPane from "../components/Alert/AlertOptionPane";
+import {Button} from "../components/Button";
 
 class AlertsPage extends Component {
     render() {
         return (
             <Page>
-                <h3>Alerts</h3>
+                <h2>Alerts</h2>
+                <hr/>
                 <div className="divider-3">
-                    <button className="button message-danger" onClick={() =>
+                    <Button message className="danger" onClick={() =>
                         AlertOptionPane.showErrorAlert({
                             message: "Sample message"
                         })
                     }>
                         Show Error Alert
-                    </button>
+                    </Button>
                 </div>
                 <div className="divider-3">
-                    <button className="button message-info" onClick={() =>
+                    <Button message className="info" onClick={() =>
                         AlertOptionPane.showInfoAlert({
                             message: "Sample message"
                         })
                     }>
                         Show Info Alert
-                    </button>
+                    </Button>
                 </div>
                 <div className="divider-3">
-                    <button className="button message-success" onClick={() =>
+                    <Button message className="success" onClick={() =>
                         AlertOptionPane.showSuccessAlert({
                             message: "Sample message"
                         })
                     }>
                         Show Success Alert
-                    </button>
+                    </Button>
                 </div>
                 <div className="divider-3">
-                    <button className="button message-warning" onClick={() =>
+                    <Button message className="warning" onClick={() =>
                         AlertOptionPane.showWarningAlert({
                             message: "Sample message"
                         })
                     }>
                         Show Warning Alert
-                    </button>
+                    </Button>
                 </div>
                 <div className="divider-3">
-                    <button className="button message" onClick={() =>
+                    <Button message onClick={() =>
                         AlertOptionPane.showPlainAlert({
                             message: "Sample message"
                         })
                     }>
                         Show Plain Alert
-                    </button>
+                    </Button>
                 </div>
             </Page>
         );

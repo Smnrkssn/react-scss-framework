@@ -46,16 +46,10 @@
 
     input[type=checkbox]:checked + .checkbox:before {
         content: "\f00c";
-        animation: effect 250ms ease-in;
+        animation: checkbox-bounce 250ms ease-in;
     }
 
     > label {
         margin-bottom: 0;
     }
-}
-
-@keyframes effect {
-    0%{transform: scale(0);}
-    50%{transform: scale(1.5);}
-    100%{transform: scale(1);}
 }

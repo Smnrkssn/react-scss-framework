@@ -7,7 +7,8 @@ class SegmentsPage extends Component {
     render() {
         return (
             <Page>
-                <h3>Segments</h3>
+                <h2>Segments</h2>
+                <hr/>
                 {["white", "gray", ...colors].map((color, i) => (
                     <Segment
                         key={i}

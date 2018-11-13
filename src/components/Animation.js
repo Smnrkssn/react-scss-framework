@@ -12,10 +12,5 @@ export const Animation = ({
         [animation]: true
     }, className);
 
-    return (
-        <div
-            className={animationClass}
-            {...props}
-        >{children}</div>
-    );
+    return <div className={animationClass} {...props}>{children}</div>;
 };

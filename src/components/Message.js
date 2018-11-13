@@ -2,7 +2,7 @@ import React from "react";
 import {classNames} from "../services/className";
 
 export const Message = ({
-    show = true,
+    hide = false,
     heading,
     list = [],
     children,
@@ -10,8 +10,8 @@ export const Message = ({
     ...props
 }) => {
     const messageClass = classNames({
-        "message": !className,
-        "hide": !show
+        "message": true,
+        "hide": hide
     }, className);
 
     return (

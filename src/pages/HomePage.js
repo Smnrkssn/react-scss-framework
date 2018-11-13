@@ -5,7 +5,8 @@ class HomePage extends Component {
     render() {
         return (
             <Page>
-                Home
+                <h2>React SCSS Framework</h2>
+                <hr/>
             </Page>
         );
     }

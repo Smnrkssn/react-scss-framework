@@ -42,6 +42,10 @@ class MainMenu extends Component {
                    className={location.pathname === routes.animationsPage ? "active" : ""}>
                     Animations
                 </a>
+                <a href={routes.articlePage} 
+                   className={location.pathname === routes.articlePage ? "active" : ""}>
+                    Article
+                </a>
                 <a href={routes.buttonsPage} 
                    className={location.pathname === routes.buttonsPage ? "active" : ""}>
                     Buttons

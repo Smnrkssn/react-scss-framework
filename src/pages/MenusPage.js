@@ -9,6 +9,7 @@ class MenusPage extends Component {
         return (
             <Page>
                 <h2>Menus</h2>
+                <hr/>
                 {(["", "gray", ...colors].map((color, i) => (
                     <Menu key={i} className={`vertical-sm inline-sm ${color} mb-7`}>
                         <a href="#page">Item 1</a>

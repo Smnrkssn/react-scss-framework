@@ -4,6 +4,8 @@ body {
 
 #main-menu {
     min-height: 100vh;
+    max-height: 100vh;
+    overflow-y: auto;
 }
 
 @media (max-width: $mediaMedium) {
@@ -14,6 +16,8 @@ body {
     #main-menu {
         width: 100%;
         min-height: inherit;
+        max-height: inherit;
+        overflow-y: initial;
     }
 
     .columns .column {

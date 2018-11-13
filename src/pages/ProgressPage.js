@@ -7,8 +7,9 @@ class ProgressPage extends Component {
         return (
             <Page>
                 <h2>Progress</h2>
+                <hr/>
                 {colors.map((color, i) => (
-                    <progress key={i} className={`${color} mb-15`} value="22" max="100"/>
+                    <progress key={i} className={`${color} mb-15`} value={22 + i} max="100"/>
                 ))}
             </Page>
         );

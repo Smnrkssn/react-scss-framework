@@ -7,11 +7,12 @@ class MessagesPage extends Component {
     render() {
         return (
             <Page>
-                <h3>Messages</h3>
+                <h2>Messages</h2>
+                <hr/>
                 {colors.map((color, i) => (
                     <Message
                         key={i}
-                        className={`message-${color} mb-15`}
+                        className={`${color} mb-15`}
                         heading={`${color} message`}
                         list={["Sample content"]}
                     />

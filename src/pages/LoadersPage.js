@@ -2,14 +2,18 @@ import React, {Component} from "react";
 import {Page} from "../site-components/Page";
 import {Loader} from "../components/Loader";
 import {colors} from "../services/colors";
+import Segment from "../components/Segment";
 
 class LoadersPage extends Component {
     render() {
         return (
             <Page>
+                <h2>Loaders</h2>
+                <hr/>
+                <Segment.List>
                 {colors.map((color, i) => (
-                    <div key={i}>
-                        <h3>{color}</h3>
+                    <Segment key={i}>
+                        <h3>{color} loaders</h3>
                         <div className="columns">
                             <div className="column">
                                 <h4>Huge:</h4>
@@ -54,8 +58,9 @@ class LoadersPage extends Component {
                                 <Loader size="tiny" className={`${color} inverted`}/>
                             </div>
                         </div>
-                    </div>
+                    </Segment>
                 ))}
+                </Segment.List>
             </Page>
         );
     }

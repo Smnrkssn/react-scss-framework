@@ -1,6 +1,7 @@
 export const routes = {
     alertsPage: "/alerts",
     animationsPage: "/animations",
+    articlePage: "/article",
     buttonsPage: "/buttons",
     formsPage: "/forms",
     heroPage: "/hero",

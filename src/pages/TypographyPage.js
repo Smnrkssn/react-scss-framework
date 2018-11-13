@@ -1,7 +1,6 @@
 import React, {Component} from "react";
 import Segment from "../components/Segment";
 import MainMenu from "../site-components/MainMenu";
-import {colors} from "../services/colors";
 
 class TypographyPage extends Component {
     render() {
@@ -11,6 +10,9 @@ class TypographyPage extends Component {
                     <MainMenu/>
                     <div className="column">
                         <Segment.List>
+                            <Segment>
+                                <h2>Typography</h2>
+                            </Segment>
                             <Segment>
                                 <h2>Headings</h2>
                                 <h2 className="display-1">Display 1</h2>
@@ -31,6 +33,27 @@ class TypographyPage extends Component {
                                 <blockquote>
                                     This is a blockquote
                                 </blockquote>
+                            </Segment>
+                            <Segment>
+                                <h2>Text</h2>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Quisque ut pharetra lorem. Morbi turpis augue, porttitor
+                                    gravida placerat vitae, <a href="#page">link</a> pretium
+                                    nec lectus.
+                                </p>
+                            </Segment>
+                            <Segment>
+                                <h2>Code</h2>
+                                <code>
+                                    const helloWorld = () => "Hello World";
+                                </code>
+                            </Segment>
+                            <Segment>
+                                <h2>Preformatted text</h2>
+                                <pre>
+                                    This text is preformatted
+                                </pre>
                             </Segment>
                             <Segment>
                                 <h2>Unordered List</h2>
@@ -55,22 +78,6 @@ class TypographyPage extends Component {
                                     </ol>
                                     <li>List item 3</li>
                                 </ol>
-                            </Segment>
-                            <Segment>
-                                <h2>Hyperlink</h2>
-                                <a href="#page">Link</a>
-                            </Segment>
-                            <Segment>
-                                <h2>Code</h2>
-                                <code>
-                                    const helloWorld = () => "Hello World";
-                                </code>
-                            </Segment>
-                            <Segment>
-                                <h2>Preformatted text</h2>
-                                <pre>
-                                    This text is preformatted
-                                </pre>
                             </Segment>
                         </Segment.List>
                     </div>
