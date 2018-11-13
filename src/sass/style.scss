@@ -1,5 +1,6 @@
 //import external-modules
 @import "external-modules/normalize.scss";
+@import "external-modules/animate.scss";
 
 //import resources
 @import "resources/functions.scss";
@@ -10,6 +11,13 @@
 @import "layout/segment.scss";
 @import "layout/columns.scss";
 @import "layout/hero.scss";
+@import "layout/padders.scss";
+@import "layout/positioning.scss";
+@import "layout/wrappers.scss";
+@import "layout/containers.scss";
+@import "layout/dividers.scss";
+@import "layout/utils.scss";
+@import "layout/alignment.scss";
 
 //import global
 @import "global/index.scss";
@@ -25,21 +33,15 @@
 @import "components/buttons.scss";
 @import "components/form.scss";
 @import "components/overlay.scss";
-@import "components/utils.scss";
 
 //import attributes
 @import "attributes/colors.scss";
-@import "attributes/dividers.scss";
 @import "attributes/grid.scss";
 @import "attributes/headings.scss";
 @import "attributes/hover.scss";
 @import "attributes/margins.scss";
 @import "attributes/opacity.scss";
-@import "attributes/padders.scss";
-@import "attributes/positioning.scss";
 @import "attributes/visibility.scss";
-@import "attributes/wrappers.scss";
-@import "attributes/containers.scss";
 @import "attributes/size.scss";
 
 //import site-modules

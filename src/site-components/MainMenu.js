@@ -38,6 +38,10 @@ class MainMenu extends Component {
                    className={location.pathname === routes.alertsPage ? "active" : ""}>
                     Alerts
                 </a>
+                <a href={routes.animationsPage} 
+                   className={location.pathname === routes.animationsPage ? "active" : ""}>
+                    Animations
+                </a>
                 <a href={routes.blockquotePage} 
                    className={location.pathname === routes.blockquotePage ? "active" : ""}>
                     Blockquote

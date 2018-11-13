@@ -14,8 +14,11 @@
         position: fixed;
         top: 0;
         z-index: 1000;
-        max-height: 100vh;
-        overflow: auto;
+
+        &.scrollable {
+            max-height: 100vh;
+            overflow: auto;
+        }
     }
 
     .menu-item {
@@ -85,8 +88,11 @@
             position: fixed;
             top: 0;
             z-index: 1000;
-            max-height: 100vh;
-            overflow: auto;
+
+            &.scrollable {
+                max-height: 100vh;
+                overflow: auto;
+            }
         }
     }
 }

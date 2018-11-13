@@ -43,6 +43,10 @@
         background-color: $color;
         color: #FFF;
 
+        hr {
+            border-color: lighten($color, 15%);
+        }
+
         &:not(.inset){
             box-shadow: 0 0 0 1px rgba(darken($color, 25%),.15), 0 2px 3px rgba(darken($color, 25%), .2);
         }
@@ -54,6 +58,10 @@
             } @else {
                 background-color: lighten($color, 40%);
                 color: #000;
+            }
+
+            hr {
+                border-color: rgba(darken($color, 25%),.1);
             }
         }
 
