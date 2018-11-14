@@ -16,7 +16,7 @@ class SegmentsPage extends Component {
                         inline
                         className={`${color} mb-15 mr-15`}
                     >
-                        {(i > 1) ? "Light" : ""} {color}
+                        Inline {(i > 1) ? "Light" : ""} {color}
                     </Segment>
                 ))}
                 {colors.map((color, i) => (
@@ -25,7 +25,7 @@ class SegmentsPage extends Component {
                         inline
                         className={`${color} mb-15 mr-15`}
                     >
-                        {color}
+                        Inline {color}
                     </Segment>
                 ))}
                 {["white", "gray", ...colors].map((color, i) => (
@@ -36,7 +36,7 @@ class SegmentsPage extends Component {
                         inset
                         className={`${color} mb-15 mr-15`}
                     >
-                        {(i > 1) ? "Light" : ""} Inset {color}
+                        Inset Inline {(i > 1) ? "Light" : ""} {color}
                     </Segment>
                 ))}
                 {colors.map((color, i) => (
@@ -46,7 +46,7 @@ class SegmentsPage extends Component {
                         inset
                         className={`${color} mb-15 mr-15`}
                     >
-                        Inset {color}
+                        Inset Inline {color}
                     </Segment>
                 ))}
                 <h3 className="mt-30">Horizontal Rules</h3>

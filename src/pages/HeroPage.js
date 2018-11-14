@@ -36,7 +36,8 @@ class HeroPage extends Component {
                                 key={i}
                                 segment
                                 className={`${color}`}
-                            ><h2 style={{fontWeight: "lighter", margin: 0}}>Hero {color}</h2></Hero>
+                            ><h2 style={{fontWeight: "lighter", margin: 0}}>
+                                Hero Segment {color}</h2></Hero>
                         ))}
                         {colors.map((color, i) => (
                             <Segment
@@ -46,7 +47,7 @@ class HeroPage extends Component {
                             ><h2 style={{
                                 fontWeight: "lighter",
                                 margin: 0
-                            }}>Hero Light {color}</h2></Segment>
+                            }}>Hero Segment Light {color}</h2></Segment>
                         ))}
                     </Segment.List>
                 </section>
@@ -61,7 +62,7 @@ class HeroPage extends Component {
                         ><h2 style={{
                             fontWeight: "lighter",
                             margin: 0
-                        }}>Hero Inset {color}</h2></Hero>
+                        }}>Hero Inset Segment {color}</h2></Hero>
                     ))}
                 </section>
                 <section id="hero-inset-segments">

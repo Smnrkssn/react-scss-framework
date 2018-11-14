@@ -1,3 +1,6 @@
+/*----------------------------------------
+ * Android Checkbox
+ *----------------------------------------*/
 .android-checkbox {
     user-select: none;
     cursor: pointer;
@@ -74,6 +77,8 @@
 
 @each $name, $color in $darkColors {
     .android-checkbox.#{$name}{
+        background-color: inherit;
+
         input[type=checkbox]:checked + .inner {
             border-color: $color;
 

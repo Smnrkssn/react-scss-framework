@@ -99,23 +99,18 @@
 
 @each $name, $color in $darkColors {
     .menu.#{$name} {
-        background-color: $color;
-        color: #FFF;
-
         > a:hover,
         > a:active,
         > a.active,
         .menu-item:hover,
         .menu-item:active,
         .menu-item.active {
-            background-color: darken($color, 10%);
-            @if $name == black {
-                background-color: lighten($color, 10%);
-            }
+            background-color: darkHover($color, $name);
         }
 
         &.light {
             background-color: lighten($color, 10%);
+            color: #FFF;
 
             > a:hover,
             > a:active,
@@ -131,16 +126,13 @@
 
 @each $name, $color in $lightColors {
     .menu.#{$name} {
-        background-color: $color;
-        color: #000;
-
         > a:hover,
         > a:active,
         > a.active,
         .menu-item:hover,
         .menu-item:active,
         .menu-item.active {
-            background-color: darken($color, 5%);
+            background-color: lightHover($color, $name);
         }
     }
 }

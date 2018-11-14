@@ -40,43 +40,18 @@
 
 @each $name, $color in $darkColors {
     .segment.#{$name} {
-        background-color: $color;
-        color: #FFF;
-
         hr {
             border-color: lighten($color, 15%);
         }
 
         &:not(.inset){
-            box-shadow: 0 0 0 1px rgba(darken($color, 25%),.15), 0 2px 3px rgba(darken($color, 25%), .2);
+            box-shadow: 0 0 0 1px rgba(darkToDarker($color),.15), 0 2px 3px rgba(darkToDarker($color), .2);
         }
 
         &.light {
-            @if $name == black {
-                background-color: lighten($color, 75%);
-                color: #000;
-            } @else {
-                background-color: lighten($color, 40%);
-                color: #000;
-            }
-
             hr {
-                border-color: rgba(darken($color, 25%),.1);
+                border-color: rgba(darkToDarker($color),.1);
             }
-        }
-
-        &.glass {
-            background-color: rgba($color, .9);
-        }
-    }
-}
-
-@each $name, $color in $lightColors {
-    .segment.#{$name} {
-        background-color: $color;
-
-        &.glass {
-            background-color: rgba($color, .9);
         }
     }
 }

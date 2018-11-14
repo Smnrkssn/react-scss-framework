@@ -112,7 +112,7 @@ class TablesPage extends Component {
                     </tbody>
                 </ListTable>
                 <h3>Color Tables (works for all table types)</h3>
-                {[...colors, ...colors.map(color => `${color} dark`)].map((color, i) => (
+                {[...colors.map(color => `${color} light`), ...colors].map((color, i) => (
                     <Table striped sortable clickable key={i} className={`${color} mb-30`}>
                         <thead>
                         <tr>

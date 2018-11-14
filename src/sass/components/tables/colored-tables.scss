@@ -1,6 +1,11 @@
 @each $name, $color in $darkColors {
     table.#{$name}{
+        background-color: initial;
         border-color: rgba($color, .1);
+
+        &.light {
+            background-color: initial;
+        }
 
         th {
             background-color: rgba($color, .25);
@@ -45,9 +50,13 @@
             background-color: rgba($color, .3);
         }
 
-        &.dark {
+        &:not(.light) {
             color: #FFF;
             border-color: rgba($color, .5);
+
+            tr:hover {
+                background-color: darken($color, 25%);
+            }
 
             th {
                 background-color: darken($color, 8%);
@@ -55,7 +64,7 @@
             }
 
             td {
-                background-color: $color;
+                background-color: rgba($color, .95);
                 border-color: inherit;
             }
 

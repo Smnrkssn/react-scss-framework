@@ -7,6 +7,7 @@ const filterOutTableOptions = ({
     collapse,
     striped,
     clickable,
+    light,
     ...props
 }) => props;
 
@@ -15,13 +16,15 @@ const getTableClass = (tableType, {
     collapse,
     striped,
     sortable,
-    clickable
+    clickable,
+    light
 }) => classNames({
     [tableType]: true,
     "striped": striped,
     "clickable": clickable,
     "sortable": sortable,
-    "collapse": collapse
+    "collapse": collapse,
+    "light": light
 }, className);
 
 export const Table = ({children, ...props}) => (

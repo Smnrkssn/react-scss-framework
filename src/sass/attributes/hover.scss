@@ -2,7 +2,7 @@
  * Hover
  *----------------------------------------*/
 @each $name, $color in $colors {
-    .hover-#{$name}:hover{
+    .hover-#{$name}:hover {
         color: $color;
 
         a:hover {

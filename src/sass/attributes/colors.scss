@@ -12,7 +12,39 @@
         background-color: $color;
 
         &.glass {
-            background-color: rgba($color, .9);
+            background-color: glassColor($color);
+        }
+
+        &.light {
+            background-color: darkToLight($color, $name);
+            color: #000;
+        }
+    }
+}
+
+@each $name, $color in $darkColors {
+    .#{$name}{
+        background-color: $color;
+        color: #FFF;
+
+        &.glass {
+            background-color: glassColor($color);
+        }
+
+        &.light {
+            background-color: darkToLight($color, $name);
+            color: #000;
+        }
+    }
+}
+
+@each $name, $color in $lightColors {
+    .#{$name}{
+        background-color: $color;
+        color: #000;
+
+        &.glass {
+            background-color: glassColor($color);
         }
     }
 }

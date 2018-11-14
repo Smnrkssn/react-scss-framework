@@ -114,16 +114,20 @@ class Slideshow extends Component {
             className,
             ...props
         } = this.removeExtraProps(this.props);
-        const {animationStatus} = this.state;
+
+        const {
+            animationStatus,
+            canChangeSlide
+        } = this.state;
 
         const childrenCount = React.Children.count(children);
         const rightIconClass = classNames({
-            "unclickable": !this.state.canChangeSlide,
-            "disabled": this.state.active === childrenCount-1 || !this.state.canChangeSlide
+            "unclickable": !canChangeSlide,
+            "disabled": !canChangeSlide
         }, rightIcon.props.className);
         const leftIconClass = classNames({
-            "unclickable": !this.state.canChangeSlide,
-            "disabled": !this.state.canChangeSlide,
+            "unclickable": !canChangeSlide,
+            "disabled": !canChangeSlide,
         }, leftIcon.props.className);
 
         return (
@@ -131,11 +135,9 @@ class Slideshow extends Component {
                 {React.cloneElement(leftIcon, {
                     className: leftIconClass,
                     onClick: () => {
-                        if(this.state.canChangeSlide){
+                        if(canChangeSlide){
                             this.setActiveState((prevActive) =>
-                                ((prevActive-1 >= 0)
-                                    ? prevActive-1
-                                    : childrenCount - 1)
+                                ((prevActive-1 >= 0) ? prevActive-1 : childrenCount - 1)
                             );
                         }
                     }
@@ -159,11 +161,9 @@ class Slideshow extends Component {
                 {React.cloneElement(rightIcon, {
                     className: rightIconClass,
                     onClick: () => {
-                        if(this.state.canChangeSlide){
+                        if(canChangeSlide){
                             this.setActiveState((prevActive) =>
-                                (prevActive+1 < childrenCount)
-                                    ? prevActive+1
-                                    : 0,
+                                (prevActive+1 < childrenCount) ? prevActive+1 : 0,
                             );
                         }
                     }

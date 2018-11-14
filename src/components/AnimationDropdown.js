@@ -28,8 +28,8 @@ export const animations = {
         "rotateIn", "rotateInDownLeft", "rotateInDownRight", "rotateInUpLeft", "rotateInUpRight"
     ],
     "Rotating Exits": [
-        "routateOut", "routateOutDownLeft", "rotateOutDownRight", "rotateOutUpLeft",
-        "routateOutUpRight"
+        "rotateOut", "rotateOutDownLeft", "rotateOutDownRight", "rotateOutUpLeft",
+        "rotateOutUpRight"
     ],
     "Sliding Entrances": [
         "slideInUp", "slideInDown", "slideInLeft", "slideInRight"

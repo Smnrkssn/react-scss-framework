@@ -7,3 +7,44 @@
     
     @return $c;
 }
+
+/*----------------------------------------
+ * Dark colors
+ *----------------------------------------*/
+@function darkToLight($darkColor, $name: ""){
+    @if $name == black {
+        @return lighten($darkColor, 80%);
+    } @else {
+        @return lighten($darkColor, 41%);
+    }
+}
+
+@function darkHover($darkColor, $name: ""){
+    @if $name == black {
+        @return lighten($darkColor, 10%);
+    } @else {
+        @return darken($darkColor, 10%);
+    }
+}
+
+@function darkToDarker($darkColor){
+    @return darken($darkColor, 25%);
+}
+
+/*----------------------------------------
+ * Light colors
+ *----------------------------------------*/
+@function lightHover($lightColor, $name: ""){
+    @return darken($lightColor, 5%);
+}
+
+/*----------------------------------------
+ * Glass colors
+ *----------------------------------------*/
+@function glassColor($color){
+    @return rgba($color, .9);
+}
+
+@function glassToLight($color){
+    @return rgba($color, .1);
+}
