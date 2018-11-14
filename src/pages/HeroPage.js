@@ -11,7 +11,7 @@ class HeroPage extends Component {
                 <h2>Hero</h2>
                 <hr/>
                 <section id="hero">
-                    {["white", "gray", ...colors].map((color, i) => (
+                    {colors.map((color, i) => (
                         <Hero
                             key={i}
                             className={`${color}`}
@@ -31,7 +31,7 @@ class HeroPage extends Component {
                 <section id="hero-segments">
                     <h3 className="mt-30">Hero Segments</h3>
                     <Segment.List>
-                        {["white", "gray", ...colors].map((color, i) => (
+                        {colors.map((color, i) => (
                             <Hero
                                 key={i}
                                 segment
@@ -53,7 +53,7 @@ class HeroPage extends Component {
                 </section>
                 <section id="hero-inset-segments">
                     <h3 className="mt-30">Hero Inset Segments</h3>
-                    {["white", "gray", ...colors].map((color, i) => (
+                    {colors.map((color, i) => (
                         <Hero
                             key={i}
                             segment

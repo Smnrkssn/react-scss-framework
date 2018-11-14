@@ -37,7 +37,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "update routes": "node scripts.js updateRoutes"
+    "update routes": "node scripts.js updateRoutes",
+    "update colors": "node scripts.js updateColors"
   },
   "eslintConfig": {
     "extends": "react-app"

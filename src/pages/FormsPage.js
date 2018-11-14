@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import {Page} from "../site-components/Page";
 import {Checkbox, AndroidCheckbox} from "../components/Checkboxes";
-import {colors} from "../services/colors";
+import {darkColors} from "../services/colors";
 
 class FormsPage extends Component {
     state = {
@@ -24,13 +24,13 @@ class FormsPage extends Component {
                 </form>
                 <h2>Checkboxes</h2>
                 <div className="mb-30">
-                    {colors.map((color, i) => (
+                    {darkColors.map((color, i) => (
                         <Checkbox className={color} defaultChecked={true} key={i}/>
                     ))}
                 </div>
                 <h2>Android Checkboxes</h2>
                 <div className="columns">
-                    {colors.map((color, i) => (
+                    {darkColors.map((color, i) => (
                         <AndroidCheckbox id={`checkbox-${i}`} className={`${color} clearfix`} defaultChecked={true} key={i}/>
                     ))}
                 </div>

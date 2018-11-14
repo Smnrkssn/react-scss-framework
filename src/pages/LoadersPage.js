@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import {Page} from "../site-components/Page";
 import {Loader} from "../components/Loader";
-import {colors} from "../services/colors";
+import {darkColors} from "../services/colors";
 import Segment from "../components/Segment";
 
 class LoadersPage extends Component {
@@ -11,7 +11,7 @@ class LoadersPage extends Component {
                 <h2>Loaders</h2>
                 <hr/>
                 <Segment.List>
-                {colors.map((color, i) => (
+                {darkColors.map((color, i) => (
                     <Segment key={i}>
                         <h3>{color} loaders</h3>
                         <div className="columns">

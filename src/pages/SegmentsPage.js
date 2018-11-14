@@ -9,7 +9,7 @@ class SegmentsPage extends Component {
             <Page>
                 <h2>Segments</h2>
                 <hr/>
-                {["white", "gray", ...colors].map((color, i) => (
+                {colors.map((color, i) => (
                     <Segment
                         key={i}
                         light
@@ -28,7 +28,7 @@ class SegmentsPage extends Component {
                         Inline {color}
                     </Segment>
                 ))}
-                {["white", "gray", ...colors].map((color, i) => (
+                {colors.map((color, i) => (
                     <Segment
                         key={i}
                         light

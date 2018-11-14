@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import {Page} from "../site-components/Page";
-import {colors} from "../services/colors";
+import {darkColors} from "../services/colors";
 import {Menu} from "../components/Menu";
 import HidingMenu from "../components/HidingMenu";
 
@@ -10,7 +10,7 @@ class MenusPage extends Component {
             <Page>
                 <h2>Menus</h2>
                 <hr/>
-                {(["", "gray", ...colors].map((color, i) => (
+                {(darkColors.map((color, i) => (
                     <div key={i}>
                         <Menu className={`vertical-sm inline-sm ${color} mb-7`}>
                             <a href="#page">Item 1</a>
