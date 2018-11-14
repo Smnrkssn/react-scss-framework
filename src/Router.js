@@ -1,5 +1,6 @@
 import React, {Fragment} from "react";
 import {BrowserRouter, Route} from "react-router-dom";
+import AccordionPage from "./pages/AccordionPage";
 import AlertsPage from "./pages/AlertsPage";
 import AnimationsPage from "./pages/AnimationsPage";
 import ArticlePage from "./pages/ArticlePage";
@@ -21,6 +22,7 @@ export const Router = () => {
     return (
         <BrowserRouter>
             <Fragment>
+                <Route exact path={routes.accordionPage} component={AccordionPage}/>
                 <Route exact path={routes.alertsPage} component={AlertsPage}/>
                 <Route exact path={routes.animationsPage} component={AnimationsPage}/>
                 <Route exact path={routes.articlePage} component={ArticlePage}/>

@@ -113,6 +113,19 @@
                 background-color: lighten($color, 10%);
             }
         }
+
+        &.light {
+            background-color: lighten($color, 10%);
+
+            > a:hover,
+            > a:active,
+            > a.active,
+            .menu-item:hover,
+            .menu-item:active,
+            .menu-item.active {
+                background-color: $color;
+            }
+        }
     }
 }
 

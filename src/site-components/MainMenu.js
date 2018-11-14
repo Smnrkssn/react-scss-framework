@@ -34,6 +34,10 @@ class MainMenu extends Component {
                         SCSS Framework
                     </a>
                 </h3>
+                <a href={routes.accordionPage} 
+                   className={location.pathname === routes.accordionPage ? "active" : ""}>
+                    Accordion
+                </a>
                 <a href={routes.alertsPage} 
                    className={location.pathname === routes.alertsPage ? "active" : ""}>
                     Alerts

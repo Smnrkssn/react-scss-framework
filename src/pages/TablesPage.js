@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import {Page} from "../site-components/Page";
 import SortableTable from "../components/SortableTable";
+import {Table, StackedTable, DefinitionTable, ListTable} from "../components/Table";
 import {colors} from "../services/colors";
 
 class TablesPage extends Component {
@@ -10,7 +11,7 @@ class TablesPage extends Component {
                 <h2>Tables</h2>
                 <hr/>
                 <div>
-                    <table className={`table striped sortable clickable mb-30`}>
+                    <Table striped sortable clickable className={`table mb-30`}>
                         <thead>
                         <tr>
                             <th>Heading 1</th>
@@ -40,7 +41,7 @@ class TablesPage extends Component {
                             <td>Data 3</td>
                         </tr>
                         </tbody>
-                    </table>
+                    </Table>
                 </div>
                 <h3>Sortable Table</h3>
                 <SortableTable className="mb-30">
@@ -70,7 +71,7 @@ class TablesPage extends Component {
                     </tbody>
                 </SortableTable>
                 <h3>Definition Table</h3>
-                <table className="definition-table collapse mb-30">
+                <DefinitionTable collapse className="mb-30">
                     <tbody>
                         <tr>
                             <td>Heading 1</td>
@@ -83,9 +84,9 @@ class TablesPage extends Component {
                             <td>Data 2</td>
                         </tr>
                     </tbody>
-                </table>
+                </DefinitionTable>
                 <h3>Stacked Table</h3>
-                <table className="stacked-table mb-30">
+                <StackedTable className="mb-30">
                     <tbody>
                         <tr>
                             <td>Heading 1</td>
@@ -96,9 +97,9 @@ class TablesPage extends Component {
                             <td>Data 2</td>
                         </tr>
                     </tbody>
-                </table>
+                </StackedTable>
                 <h3>List Table</h3>
-                <table className="list-table mb-30">
+                <ListTable className="mb-30">
                     <tbody>
                     <tr>
                         <td>List item 1</td>
@@ -109,10 +110,10 @@ class TablesPage extends Component {
                         <td>List item 5</td>
                     </tr>
                     </tbody>
-                </table>
+                </ListTable>
                 <h3>Color Tables (works for all table types)</h3>
                 {[...colors, ...colors.map(color => `${color} dark`)].map((color, i) => (
-                    <table key={i} className={`table striped sortable clickable ${color} mb-30`}>
+                    <Table striped sortable clickable key={i} className={`${color} mb-30`}>
                         <thead>
                         <tr>
                             <th>Heading 1</th>
@@ -142,7 +143,7 @@ class TablesPage extends Component {
                             <td>Data 3</td>
                         </tr>
                         </tbody>
-                    </table>
+                    </Table>
                 ))}
             </Page>
         );

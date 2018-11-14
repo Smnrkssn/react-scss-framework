@@ -1,4 +1,5 @@
 export const routes = {
+    accordionPage: "/accordion",
     alertsPage: "/alerts",
     animationsPage: "/animations",
     articlePage: "/article",

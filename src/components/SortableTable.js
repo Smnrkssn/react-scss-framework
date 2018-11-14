@@ -64,8 +64,10 @@ class SortableTable extends Component {
         });
     };
 
+    filterExtraProps = ({children, ...props}) => props;
+
     render(){
-        const {className, children, ...props} = this.props;
+        const {className, ...props} = this.filterExtraProps(this.props);
         const {table} = this.state;
 
         return (

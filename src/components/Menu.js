@@ -8,6 +8,8 @@ export const Menu = ({
     right = false,
     center = false,
     fixed = false,
+    hide = false,
+    light = false,
     children,
     ...props
 }) => {
@@ -17,7 +19,9 @@ export const Menu = ({
         "inline": inline,
         "right": right,
         "center": center,
-        "fixed": fixed
+        "fixed": fixed,
+        "light": light,
+        "hide": hide
     }, className);
 
     return (

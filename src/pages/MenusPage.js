@@ -11,18 +11,34 @@ class MenusPage extends Component {
                 <h2>Menus</h2>
                 <hr/>
                 {(["", "gray", ...colors].map((color, i) => (
-                    <Menu key={i} className={`vertical-sm inline-sm ${color} mb-7`}>
-                        <a href="#page">Item 1</a>
-                        <a href="#page">Item 2</a>
-                        <a href="#page">Item 3</a>
-                        <a href="#page">Item 4</a>
-                        <a href="#page">Item 5</a>
-                        <a href="#page">Item 6</a>
-                        <a href="#page">Item 7</a>
-                        <a href="#page">Item 8</a>
-                        <a href="#page">Item 9</a>
-                        <a href="#page">Item 10</a>
-                    </Menu>
+                    <div key={i}>
+                        <Menu className={`vertical-sm inline-sm ${color} mb-7`}>
+                            <a href="#page">Item 1</a>
+                            <a href="#page">Item 2</a>
+                            <a href="#page">Item 3</a>
+                            <a href="#page">Item 4</a>
+                            <a href="#page">Item 5</a>
+                            <a href="#page">Item 6</a>
+                            <a href="#page">Item 7</a>
+                            <a href="#page">Item 8</a>
+                            <a href="#page">Item 9</a>
+                            <a href="#page">Item 10</a>
+                        </Menu>
+                        {(color !== "" && color !== "gray") && (
+                            <Menu light className={`vertical-sm inline-sm ${color} mb-7`}>
+                                <a href="#page">Item 1</a>
+                                <a href="#page">Item 2</a>
+                                <a href="#page">Item 3</a>
+                                <a href="#page">Item 4</a>
+                                <a href="#page">Item 5</a>
+                                <a href="#page">Item 6</a>
+                                <a href="#page">Item 7</a>
+                                <a href="#page">Item 8</a>
+                                <a href="#page">Item 9</a>
+                                <a href="#page">Item 10</a>
+                            </Menu>
+                        )}
+                    </div>
                 )))}
                 <h2 className="mt-30">Vertical Menus</h2>
                 <Menu vertical className="gray">
