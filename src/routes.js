@@ -13,6 +13,7 @@ export const routes = {
     messagesPage: "/messages",
     progressPage: "/progress",
     segmentsPage: "/segments",
+    slideshowPage: "/slideshow",
     tablesPage: "/tables",
     typographyPage: "/typography"
 };

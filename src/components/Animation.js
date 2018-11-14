@@ -4,6 +4,7 @@ import {classNames} from "../services/className";
 export const Animation = ({
     animation = "fadeIn",
     className,
+    duration = 1000,
     children,
     ...props
 }) => {
@@ -12,5 +13,9 @@ export const Animation = ({
         [animation]: true
     }, className);
 
-    return <div className={animationClass} {...props}>{children}</div>;
+    const style = {
+        animationDuration: `${duration / 1000}s`
+    };
+
+    return <div className={animationClass} style={style} {...props}>{children}</div>;
 };

@@ -14,6 +14,7 @@ import MenusPage from "./pages/MenusPage";
 import MessagesPage from "./pages/MessagesPage";
 import ProgressPage from "./pages/ProgressPage";
 import SegmentsPage from "./pages/SegmentsPage";
+import SlideshowPage from "./pages/SlideshowPage";
 import TablesPage from "./pages/TablesPage";
 import TypographyPage from "./pages/TypographyPage";
 import {routes} from "./routes";
@@ -36,6 +37,7 @@ export const Router = () => {
                 <Route exact path={routes.messagesPage} component={MessagesPage}/>
                 <Route exact path={routes.progressPage} component={ProgressPage}/>
                 <Route exact path={routes.segmentsPage} component={SegmentsPage}/>
+                <Route exact path={routes.slideshowPage} component={SlideshowPage}/>
                 <Route exact path={routes.tablesPage} component={TablesPage}/>
                 <Route exact path={routes.typographyPage} component={TypographyPage}/>
             </Fragment>
