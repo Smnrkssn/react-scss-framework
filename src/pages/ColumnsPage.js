@@ -39,36 +39,36 @@ class ColumnsPage extends Component {
                     </Segment>
                 </Columns>
                 <h2 className="mt-30">Specific sizes and several rows</h2>
-                <Columns sizes={[3, 5, 8, 6, 4]}>
+                <Columns sizes={[4, 3, 5]}>
                     <Segment className="secondary">
-                        <h2 className="mb-0">3/16</h2>
+                        <h2 className="mb-0">4/12</h2>
                     </Segment>
                     <Segment className="secondary">
-                        <h2 className="mb-0">5/16</h2>
+                        <h2 className="mb-0">3/12</h2>
                     </Segment>
                     <Segment className="secondary">
-                        <h2 className="mb-0">8/16</h2>
-                    </Segment>
-                    <Segment className="secondary">
-                        <h2 className="mb-0">6/16</h2>
-                    </Segment>
-                    <Segment className="secondary">
-                        <h2 className="mb-0">4/16</h2>
+                        <h2 className="mb-0">5/12</h2>
                     </Segment>
                     <Segment className="secondary">
                         <h2 className="mb-0">auto</h2>
                     </Segment>
+                    <Segment className="secondary">
+                        <h2 className="mb-0">auto</h2>
+                    </Segment>
+                    <Segment className="secondary" size={3}>
+                        <h2 className="mb-0">3/12</h2>
+                    </Segment>
                 </Columns>
                 <h2 className="mt-30">Custom breakpoint</h2>
-                <Columns sizes={[3, 5, 8]} breakpoint="md">
+                <Columns sizes={[4, null, 5]} breakpoint="md">
                     <Segment className="secondary">
-                        <h2 className="mb-0">3/16</h2>
+                        <h2 className="mb-0">4/12</h2>
                     </Segment>
                     <Segment className="secondary">
-                        <h2 className="mb-0">5/16</h2>
+                        <h2 className="mb-0">3/12</h2>
                     </Segment>
                     <Segment className="secondary">
-                        <h2 className="mb-0">8/16</h2>
+                        <h2 className="mb-0">5/12</h2>
                     </Segment>
                 </Columns>
             </Page>

@@ -25,6 +25,14 @@
 .form {
     font-size: $h6;
 
+    .columns {
+        margin-right: -$divider3;
+
+        .column {
+            padding: 0 $divider3 $divider3 0;
+        }
+    }
+
     label {
         display: block;
         margin: 0 0 .28571429rem 0;
@@ -73,24 +81,3 @@
     }
 }
 
-.input {
-    margin: 0;
-    padding: 10px;
-    outline: 0;
-    background: #fff;
-    border: none;
-    font-size: $h5;
-    transition: .15s ease-out;
-
-    &:focus {
-        box-shadow: inset 0 0 3px 1px $secondary;
-    }
-
-    &:disabled {
-        background: #eee;
-    }
-
-    &.invalid {
-        background: #F8ECEC;
-    }
-}

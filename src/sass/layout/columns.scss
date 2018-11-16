@@ -26,12 +26,12 @@
     }
 }
 
-@for $i from 0 through 16 {
+@for $i from 0 through 12 {
     .columns {
         .column-#{$i}{
             @extend .column;
             flex: none;
-            width: 100% / 16 * $i;
+            width: 100% / 12 * $i;
         }
 
         @media (max-width: $mediaSmall) {
@@ -42,7 +42,7 @@
             &.unstackable,
             &.breakpoint {
                 .column-#{$i}{
-                    width: 100% / 16 * $i;
+                    width: 100% / 12 * $i;
                 }
             }
         }

@@ -6,6 +6,7 @@ export const Columns = ({
     unstackable = false,
     breakpoint,
     sizes = [],
+    columnProps = {},
     children,
     ...props
 }) => {
@@ -16,14 +17,19 @@ export const Columns = ({
         [breakpoint]: breakpoint
     }, className, breakpoint);
 
-    const getColumnClass = (index) => (!sizes[index]) ? "column" : `column-${sizes[index]}`;
+    const getColumnClass = (index, {size}) => {
+        if(size) return `column-${size}`;
+        return (!sizes[index]) ? "column" : `column-${sizes[index]}`;
+    };
 
     return (
         <div className={columnsClass} {...props}>
             {React.Children.map(children, (child, i) => (
-                <div key={i} className={getColumnClass(i)}>
-                    {child}
-                </div>
+                (child.props.className !== "column") ? (
+                    <div key={i} className={getColumnClass(i, child.props)} {...columnProps}>
+                        {child}
+                    </div>
+                ) : React.cloneElement(child, {className: getColumnClass(i, child.props)})
             ))}
         </div>
     );
