@@ -29,7 +29,7 @@ class SlideshowPage extends Component {
                         this.setState({duration: parseInt(event.target.value, 10)});
                     }}/>
                 </form>
-                <Slideshow {...this.state} className="wrapper-5">
+                <Slideshow {...this.state} wrapper={5}>
                     <div>
                         <h1 className="mb-0">Slide 1</h1>
                     </div>

@@ -15,5 +15,6 @@ export const routes = {
     segmentsPage: "/segments",
     slideshowPage: "/slideshow",
     tablesPage: "/tables",
+    tooltipPage: "/tooltip",
     typographyPage: "/typography"
 };

@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import {joinClassNames, classNames} from "../services/className";
+import {classNames, getOptionalClasses, filterOutOptionalClasses} from "../services/className";
 import PropTypes from "prop-types";
 import {Animation} from "./Animation";
 
@@ -129,9 +129,13 @@ class Slideshow extends Component {
             "unclickable": !canChangeSlide,
             "disabled": !canChangeSlide,
         }, leftIcon.props.className);
+        const slideshowClass = classNames({
+            ...getOptionalClasses(props),
+            "slideshow": true
+        }, className);
 
         return (
-            <div className={joinClassNames("slideshow", className)} {...props}>
+            <div className={slideshowClass} {...filterOutOptionalClasses(props)}>
                 {React.cloneElement(leftIcon, {
                     className: leftIconClass,
                     onClick: () => {

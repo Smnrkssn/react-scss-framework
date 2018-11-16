@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import {Message} from "../components/Message";
 import {Page} from "../site-components/Page";
-import {colors} from "../services/colors";
+import withOptionsForm from "../site-components/withOptionsForm";
 
 class MessagesPage extends Component {
     render() {
@@ -9,17 +9,23 @@ class MessagesPage extends Component {
             <Page>
                 <h2>Messages</h2>
                 <hr/>
-                {colors.map((color, i) => (
-                    <Message
-                        key={i}
-                        className={`${color} mb-15`}
-                        heading={`${color} message`}
-                        list={["Sample content"]}
-                    />
-                ))}
+                {this.props.renderForm({})}
+                <Message
+                    {...this.props.options}
+                    className={`${this.props.options.className} mb-15`}
+                    heading={`Sample message`}
+                    list={["Sample content"]}
+                />
             </Page>
         );
     }
 }
 
-export default MessagesPage;
+export default withOptionsForm({
+    className: "white",
+    inline: false,
+    segment: false,
+    inset: false,
+    light: false,
+    glass: false
+})(MessagesPage);

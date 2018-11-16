@@ -18,6 +18,10 @@
         &.light {
             background-color: darkToLight($color, $name);
             color: #000;
+
+            &.glass {
+                background-color: glassColor(darkToLight($color, $name));
+            }
         }
     }
 }
@@ -29,11 +33,16 @@
 
         &.glass {
             background-color: glassColor($color);
+            color: #FFF;
         }
 
         &.light {
             background-color: darkToLight($color, $name);
             color: #000;
+
+            &.glass {
+                background-color: glassColor(darkToLight($color, $name));
+            }
         }
     }
 }

@@ -1,28 +1,27 @@
 import React from "react";
-import {classNames} from "../services/className";
+import {classNames, getOptionalClasses, filterOutOptionalClasses} from "../services/className";
 
 export const Button = ({
     className,
     loading = false,
     outlined = false,
-    message = false,
-    segment = false,
     disabled = false,
     children,
     ...props
 }) => {
     const buttonClass = classNames({
         "button": true,
-        "message": message,
-        "segment": segment,
         "outlined": outlined,
         "loading": loading,
-        "disabled": disabled
+        "disabled": disabled,
+        ...getOptionalClasses(props)
     }, className);
 
     return (
-        <button disabled={disabled} className={buttonClass} {...props}>
-            {children}
-        </button>
+        <button
+            disabled={disabled}
+            className={buttonClass}
+            {...filterOutOptionalClasses(props)}
+        >{children}</button>
     );
 };

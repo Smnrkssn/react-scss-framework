@@ -1,24 +1,18 @@
 import React from "react";
-import {classNames} from "../services/className";
+import {classNames, getOptionalClasses, filterOutOptionalClasses} from "../services/className";
 
 export const Hero = ({
-    className = "",
-    light = false,
     segment = false,
-    inset = false,
+    hero = true,
+    className = "",
     children,
     ...props
-}) => {
-    const heroClass = classNames({
-        "hero": true,
-        "light": light,
-        "segment": segment,
-        "inset": inset
-    }, className);
-
-    return (
-        <div className={heroClass} {...props}>
-            {children}
-        </div>
-    );
-};
+}) => (
+    <div className={classNames({
+            ...getOptionalClasses(props),
+            "segment": segment,
+            "hero": hero
+        }, className)}
+        {...filterOutOptionalClasses(props)}
+    >{children}</div>
+);

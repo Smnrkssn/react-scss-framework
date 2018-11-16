@@ -1,8 +1,9 @@
 import React from "react";
-import {classNames} from "../services/className";
+import {classNames, getOptionalClasses, filterOutOptionalClasses} from "../services/className";
 
 export const Columns = ({
     className,
+    segment = false,
     unstackable = false,
     breakpoint,
     sizes = [],
@@ -14,7 +15,9 @@ export const Columns = ({
         "columns": true,
         "breakpoint": breakpoint,
         "unstackable": unstackable,
-        [breakpoint]: breakpoint
+        [breakpoint]: breakpoint,
+        ...getOptionalClasses(props),
+        "segment": segment
     }, className, breakpoint);
 
     const getColumnClass = (index, {size}) => {
@@ -23,14 +26,19 @@ export const Columns = ({
     };
 
     return (
-        <div className={columnsClass} {...props}>
-            {React.Children.map(children, (child, i) => (
-                (child.props.className !== "column") ? (
-                    <div key={i} className={getColumnClass(i, child.props)} {...columnProps}>
-                        {child}
-                    </div>
-                ) : React.cloneElement(child, {className: getColumnClass(i, child.props)})
-            ))}
+        <div className={columnsClass} {...filterOutOptionalClasses(props)}>
+            {React.Children
+                .toArray(children)
+                .filter(children => children)
+                .map((child, i) => (
+                    (child.props.className && child.props.className.includes("column")) ? (
+                        React.cloneElement(child, {className: getColumnClass(i, child.props)})
+                    ) : (
+                        <div key={i} className={getColumnClass(i, child.props)} {...columnProps}>
+                            {child}
+                        </div>
+                    )
+                ))}
         </div>
     );
 };

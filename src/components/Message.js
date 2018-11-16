@@ -1,8 +1,8 @@
 import React from "react";
-import {classNames} from "../services/className";
+import {classNames, filterOutOptionalClasses, getOptionalClasses} from "../services/className";
 
 export const Message = ({
-    hide = false,
+    message = true,
     heading,
     list = [],
     children,
@@ -10,12 +10,12 @@ export const Message = ({
     ...props
 }) => {
     const messageClass = classNames({
-        "message": true,
-        "hide": hide
+        ...getOptionalClasses(props),
+        "message": message
     }, className);
 
     return (
-        <div className={messageClass} {...props}>
+        <div className={messageClass} {...filterOutOptionalClasses(props)}>
             {(heading) && (<h4 className="heading">{heading}</h4>)}
             {(list.length > 0) && (
                 <ul>

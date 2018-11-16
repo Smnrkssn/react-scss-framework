@@ -1,10 +1,13 @@
 import React, {Component} from "react";
-import {joinClassNames} from "../services/className";
+import {filterOutOptionalClasses, joinClassNames} from "../services/className";
 import _ from "lodash";
+import {filterOutTableOptions, getTableClass} from "./Table";
+import {compose} from "redux";
 
 class SortableTable extends Component {
     static defaultProps = {
-        className: ""
+        className: "",
+        sortable: true
     };
 
     constructor(props){
@@ -67,11 +70,14 @@ class SortableTable extends Component {
     filterExtraProps = ({children, ...props}) => props;
 
     render(){
-        const {className, ...props} = this.filterExtraProps(this.props);
         const {table} = this.state;
 
         return (
-            <table className={joinClassNames("table sortable", className)} {...props}>
+            <table className={getTableClass("table", this.props)} {...compose(
+                this.filterExtraProps,
+                filterOutTableOptions,
+                filterOutOptionalClasses
+            )(this.props)}>
                 <thead {...this.thead.props}>
                     <tr {...this.theadTr.props}>
                         {Object.keys(this.state.table[0]).map((th, i) => (

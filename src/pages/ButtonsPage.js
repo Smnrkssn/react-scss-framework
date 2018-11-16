@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import {Page} from "../site-components/Page";
-import {colors, darkColors} from "../services/colors";
 import {Button} from "../components/Button";
+import withOptionsForm from "../site-components/withOptionsForm";
 
 class ButtonsPage extends Component {
     render() {
@@ -9,74 +9,22 @@ class ButtonsPage extends Component {
             <Page>
                 <h2>Buttons</h2>
                 <hr/>
-                {darkColors.map((color, i) => (
-                    <Button key={i} className={`${color} mb-15 mr-15`}>
-                        {color} button
-                    </Button>
-                ))}
-                <h3 className="mt-30">Loading Buttons</h3>
-                {darkColors.map((color, i) => (
-                    <Button loading key={i} className={`${color} mb-15 mr-15`}>
-                        {color} button
-                    </Button>
-                ))}
-                <h3 className="mt-30">Disabled Buttons</h3>
-                {darkColors.map((color, i) => (
-                    <Button disabled key={i} className={`${color} mb-15 mr-15`}>
-                        {color} button
-                    </Button>
-                ))}
-                <h3 className="mt-30">Outlined Buttons</h3>
-                {darkColors.map((color, i) => (
-                    <Button outlined key={i} className={`${color} mb-15 mr-15`}>
-                        {color} button
-                    </Button>
-                ))}
-                <h3 className="mt-30">Disabled Outlined Buttons</h3>
-                {darkColors.map((color, i) => (
-                    <Button outlined disabled key={i} className={`${color} mb-15 mr-15`}>
-                        {color} button
-                    </Button>
-                ))}
-                <h3 className="mt-30">Loading Outlined Buttons</h3>
-                {darkColors.map((color, i) => (
-                    <Button outlined loading key={i} className={`${color} mb-15 mr-15`}>
-                        {color} button
-                    </Button>
-                ))}
-                <h3 className="mt-30">Message Buttons</h3>
-                {colors.map((color, i) => (
-                    <Button message key={i} className={`${color} mb-15 mr-15`}>
-                        {color} button
-                    </Button>
-                ))}
-                <h3 className="mt-30">Segment Buttons</h3>
-                {colors.map((color, i) => (
-                    <Button segment key={i} className={`${color} mb-15 mr-15`}>
-                        {color} button
-                    </Button>
-                ))}
-                <h3 className="mt-30">Loading Segment Buttons</h3>
-                {darkColors.map((color, i) => (
-                    <Button segment loading key={i} className={`${color} mb-15 mr-15`}>
-                        {color} button
-                    </Button>
-                ))}
-                <h3 className="mt-30">Disabled Segment Buttons</h3>
-                {darkColors.map((color, i) => (
-                    <Button segment disabled key={i} className={`${color} mb-15 mr-15`}>
-                        {color} button
-                    </Button>
-                ))}
-                <h3 className="mt-30">Segment Message Buttons</h3>
-                {colors.map((color, i) => (
-                    <Button segment message key={i} className={`${color} mb-15 mr-15`}>
-                        {color} button
-                    </Button>
-                ))}
+                {this.props.renderForm({})}
+                <Button {...this.props.options}>
+                    Button
+                </Button>
             </Page>
         );
     }
 }
 
-export default ButtonsPage;
+export default withOptionsForm({
+    className: "primary",
+    disabled: false,
+    loading: false,
+    outlined: false,
+    message: false,
+    segment: false,
+    light: false,
+    glass: false
+})(ButtonsPage);

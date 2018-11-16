@@ -94,6 +94,10 @@ class MainMenu extends Component {
                    className={location.pathname === routes.tablesPage ? "active" : ""}>
                     Tables
                 </a>
+                <a href={routes.tooltipPage} 
+                   className={location.pathname === routes.tooltipPage ? "active" : ""}>
+                    Tooltip
+                </a>
                 <a href={routes.typographyPage} 
                    className={location.pathname === routes.typographyPage ? "active" : ""}>
                     Typography

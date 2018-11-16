@@ -1,34 +1,23 @@
 import React from "react";
-import {classNames} from "../services/className";
+import {classNames, getOptionalClasses, filterOutOptionalClasses} from "../services/className";
 
 const Segment = ({
+    segment = true,
     className = "",
-    inline = false,
-    light = false,
-    glass = false,
-    inset = false,
-    hero = false,
     children,
     ...props
-}) => {
-    const segmentClass = classNames({
-        "segment": true,
-        "inline": inline,
-        "light": light,
-        "glass": glass,
-        "inset": inset,
-        "hero": hero
-    }, className);
-
-    return (
-        <div className={segmentClass} {...props}>
-            {children}
-        </div>
-    );
-};
+}) =>  (
+    <div className={classNames({
+        ...getOptionalClasses(props),
+        "segment": segment
+    }, className)} {...filterOutOptionalClasses(props)}>{children}</div>
+);
 
 Segment.List = ({className = "", children, ...props}) => (
-    <div className={classNames("segment-list", className)} {...props}>
+    <div className={classNames({
+        ...getOptionalClasses(props),
+        "segment-list": true
+    }, className)} {...filterOutOptionalClasses(props)}>
         {children}
     </div>
 );

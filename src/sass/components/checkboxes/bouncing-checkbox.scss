@@ -1,5 +1,5 @@
 /*----------------------------------------
- * Checkbox Container
+ * Bouncing Checkbox
  *----------------------------------------*/
 @mixin leftCenteredCheckbox(){
     position: absolute;
@@ -11,7 +11,7 @@
 }
 
 @each $name, $color in $darkColors {
-    .checkbox-container .checkbox.#{$name}{
+    .bouncing-checkbox .checkbox.#{$name}{
         background-color: inherit;
 
         &:before {
@@ -20,7 +20,7 @@
     }
 }
 
-.checkbox-container {
+.bouncing-checkbox {
     position: relative;
     display: inline-block;
     min-height: 20px;

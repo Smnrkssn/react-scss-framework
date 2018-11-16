@@ -1,6 +1,12 @@
 import React from "react";
-import {joinClassNames} from "../services/className";
+import {classNames, getOptionalClasses, filterOutOptionalClasses} from "../services/className";
 
 export const Loader = ({size = "medium", className = "", ...props}) => (
-    <div className={joinClassNames(`loader-${size}`, className)} {...props}/>
+    <div
+        className={classNames({
+            ...getOptionalClasses(props),
+            [`loader-${size}`]: true
+        }, className)}
+        {...filterOutOptionalClasses(props)}
+    />
 );

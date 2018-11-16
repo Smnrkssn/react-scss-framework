@@ -1,0 +1,37 @@
+.tooltip-container {
+    position: relative;
+
+    &:hover .tooltip:not(.controlled) {
+        display: block;
+    }
+
+    .tooltip {
+        position: absolute;
+        z-index: 999;
+
+        &:not(.controlled){
+            display: none;
+        }
+
+        &.top {
+            top: 0;
+            transform: translateY(-115%);
+        }
+
+        &.left {
+            left: 0;
+        }
+
+        &.right {
+            right: 0;
+        }
+
+        &.bottom {
+            bottom: 0;
+            transform: translateY(115%);
+        }
+
+        padding: 8px;
+        font-size: 12px;
+    }
+}

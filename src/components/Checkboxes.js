@@ -1,8 +1,8 @@
 import React from "react";
 import {joinClassNames} from "../services/className";
 
-export const Checkbox = ({className = "", ...props}) => (
-    <div className="checkbox-container">
+export const BouncingCheckbox = ({className = "", ...props}) => (
+    <div className="bouncing-checkbox">
         <input type="checkbox" {...props}/>
         <div className={joinClassNames("checkbox", className)}/>
     </div>

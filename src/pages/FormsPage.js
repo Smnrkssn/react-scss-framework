@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import {Page} from "../site-components/Page";
-import {Checkbox, AndroidCheckbox} from "../components/Checkboxes";
+import {BouncingCheckbox, AndroidCheckbox} from "../components/Checkboxes";
 import {darkColors} from "../services/colors";
 import {AnimationDropdown} from "../components/AnimationDropdown";
 import Form from "../components/Form";
@@ -47,10 +47,10 @@ class FormsPage extends Component {
                         <input type="text" placeholder="3/12" size={3}/>
                     </Form.Columns>
                 </Form>
-                <h2>Checkboxes</h2>
+                <h2>Bouncing Checkboxes</h2>
                 <div className="mb-30">
                     {darkColors.map((color, i) => (
-                        <Checkbox className={color} defaultChecked={true} key={i}/>
+                        <BouncingCheckbox className={color} defaultChecked={true} key={i}/>
                     ))}
                 </div>
                 <h2>Android Checkboxes</h2>

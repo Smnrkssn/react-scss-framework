@@ -3,6 +3,10 @@ import {Page} from "../site-components/Page";
 import {Loader} from "../components/Loader";
 import {darkColors} from "../services/colors";
 import Segment from "../components/Segment";
+import {Columns} from "../components/Columns";
+import withOptionsForm from "../site-components/withOptionsForm";
+
+const sizes = ["huge", "large", "medium", "small", "tiny"];
 
 class LoadersPage extends Component {
     render() {
@@ -10,60 +14,32 @@ class LoadersPage extends Component {
             <Page>
                 <h2>Loaders</h2>
                 <hr/>
+                {this.props.renderForm({})}
                 <Segment.List>
-                {darkColors.map((color, i) => (
-                    <Segment key={i}>
-                        <h3>{color} loaders</h3>
-                        <div className="columns">
-                            <div className="column">
-                                <h4>Huge:</h4>
-                                <Loader size="huge" className={color}/>
-                            </div>
-                            <div className="column">
-                                <h4>Large:</h4>
-                                <Loader size="large" className={color}/>
-                            </div>
-                            <div className="column">
-                                <h4>Medium:</h4>
-                                <Loader size="medium" className={color}/>
-                            </div>
-                            <div className="column">
-                                <h4>Small:</h4>
-                                <Loader size="small" className={color}/>
-                            </div>
-                            <div className="column">
-                                <h4>Tiny:</h4>
-                                <Loader size="tiny" className={color}/>
-                            </div>
-                        </div>
-                        <div className="columns">
-                            <div className="column">
-                                <h4>Huge:</h4>
-                                <Loader size="huge" className={`${color} inverted`}/>
-                            </div>
-                            <div className="column">
-                                <h4>Large:</h4>
-                                <Loader size="large" className={`${color} inverted`}/>
-                            </div>
-                            <div className="column">
-                                <h4>Medium:</h4>
-                                <Loader size="medium" className={`${color} inverted`}/>
-                            </div>
-                            <div className="column">
-                                <h4>Small:</h4>
-                                <Loader size="small" className={`${color} inverted`}/>
-                            </div>
-                            <div className="column">
-                                <h4>Tiny:</h4>
-                                <Loader size="tiny" className={`${color} inverted`}/>
-                            </div>
-                        </div>
-                    </Segment>
-                ))}
+                    {darkColors.map((color, i) => (
+                        <Segment key={i}>
+                            <h3>{color} loaders</h3>
+                            <Columns sizes={[3, 2, 2, 2, 2]}>
+                                {sizes.map((size, j) => (
+                                    <div className="column" key={j}>
+                                        <h4>{size}</h4>
+                                        <Loader
+                                            size={size}
+                                            {...this.props.options}
+                                            className={`${color}`}
+                                        />
+                                    </div>
+                                ))}
+                            </Columns>
+                        </Segment>
+                    ))}
                 </Segment.List>
             </Page>
         );
     }
 }
 
-export default LoadersPage;
+export default withOptionsForm({
+    inverted: false,
+    light: false
+})(LoadersPage);

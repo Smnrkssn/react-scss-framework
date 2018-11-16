@@ -15,6 +15,16 @@
             background-color: initial;
             border-top-color: $color;
 
+            &.light {
+                border-top-color: darkToLight($color);
+                background-color: initial;
+
+                &.inverted {
+                    border-color: darkToLight($color);
+                    border-top-color: transparent;
+                }
+            }
+
             &.inverted {
                 border-color: $color;
                 border-top-color: transparent;

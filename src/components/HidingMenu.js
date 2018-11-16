@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import PropTypes from "prop-types";
 import {Menu} from "./Menu";
-import {classNames} from "../services/className";
+import {classNames, getOptionalClasses, filterOutOptionalClasses} from "../services/className";
 
 class HidingMenu extends Component {
     static defaultProps = {
@@ -48,6 +48,7 @@ class HidingMenu extends Component {
             [`hide-${breakpoint}`]: true,
             [`vertical-${breakpoint}`]: true,
             [`w-100-${breakpoint}`]: true,
+            ...getOptionalClasses(props),
             "show": this.state.showMenu
         }, className);
 
@@ -67,7 +68,7 @@ class HidingMenu extends Component {
                     >{mobileIcon}</div>
                     {mobileMenuChildren}
                 </Menu>
-                <Menu className={menuClass} {...props}>
+                <Menu className={menuClass} {...filterOutOptionalClasses(props)}>
                     {children}
                 </Menu>
             </Menu>

@@ -1,11 +1,11 @@
 import React from "react";
 import {Columns} from "./Columns";
-import {classNames} from "../services/className";
+import {classNames, getOptionalClasses, filterOutOptionalClasses} from "../services/className";
 
 const Form = ({className, children, ...props}) => (
-    <form className={classNames({"form": true}, className)} {...props}>
-        {children}
-    </form>
+    <form className={classNames({"form": true, ...getOptionalClasses(props)}, className)}
+          {...filterOutOptionalClasses(props)}
+    >{children}</form>
 );
 
 Form.Columns = ({children, ...props}) => {
@@ -13,7 +13,7 @@ Form.Columns = ({children, ...props}) => {
     let columnChildren = [];
 
     React.Children.forEach(children, (child, i) => {
-        if(child.props.className === "column"){
+        if(child.props.className && child.props.className.includes("column")){
             columns.push(child);
         } else {
             columnChildren.push(child);

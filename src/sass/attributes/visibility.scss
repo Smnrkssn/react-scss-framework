@@ -9,6 +9,10 @@
     display: inherit;
 }
 
+.inline {
+    display: inline-block;
+}
+
 @each $name, $size in $mediaQueries {
     .show-#{$name}{
         display: none;
