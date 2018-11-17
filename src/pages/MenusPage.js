@@ -47,8 +47,12 @@ class MenusPage extends Component {
 
 export default withOptionsForm({
     className: "primary",
+    loading: false,
     vertical: false,
     inline: false,
+    right: false,
+    center: false,
+    fixed: false,
     light: false,
     glass: false,
     segment: false,

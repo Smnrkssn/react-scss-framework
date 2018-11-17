@@ -25,6 +25,7 @@ export default withOptionsForm({
     outlined: false,
     message: false,
     segment: false,
+    inset: false,
     light: false,
     glass: false
 })(ButtonsPage);

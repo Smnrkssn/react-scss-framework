@@ -16,31 +16,29 @@ class HeroPage extends Component {
                         <h2 className="lighter mb-0">Hero Container</h2>
                     </Hero>
                 </section>
-                <section id="hero-inset-segments">
+                <section id="hero-with-height-adjustments">
                     <h3 className="mt-30">Hero with height adjustments</h3>
-                    <Segment
-                        hero
-                        inset
-                        className={`gray h-100 mb-15 mt-15`}
-                    ><h2 className="lighter mb-0">Hero h-100</h2></Segment>
-                    <Segment
-                        hero
-                        inset
-                        className={`light primary h-75 mb-15 mt-15`}
-                    ><h2 style={{
-                        fontWeight: "lighter",
-                        margin: 0
-                    }}>Hero h-75</h2></Segment>
-                    <Segment
-                        hero
-                        inset
-                        className={`light secondary h-50 mb-15 mt-15`}
-                    ><h2 className="lighter mb-0">Hero h-50</h2></Segment>
-                    <Segment
-                        hero
-                        inset
-                        className={`light b-primary h-25 mb-15 mt-15`}
-                    ><h2 className="lighter mb-0">Hero h-25</h2></Segment>
+                    <div className="inset-list">
+                        <Hero
+                            inset
+                            className={`gray h-100`}
+                        ><h2 className="lighter mb-0">Hero h-100</h2></Hero>
+                        <Hero
+                            inset
+                            className={`light primary h-75`}
+                        ><h2 style={{
+                            fontWeight: "lighter",
+                            margin: 0
+                        }}>Hero h-75</h2></Hero>
+                        <Segment
+                            inset
+                            className={`light secondary h-50`}
+                        ><h2 className="lighter mb-0">Hero h-50</h2></Segment>
+                        <Hero
+                            inset
+                            className={`light b-primary h-25`}
+                        ><h2 className="lighter mb-0">Hero h-25</h2></Hero>
+                    </div>
                 </section>
             </Page>
         );
@@ -49,9 +47,11 @@ class HeroPage extends Component {
 
 export default withOptionsForm({
     className: "primary",
+    loading: false,
+    disabled: false,
+    message: false,
     segment: false,
     inset: false,
     light: false,
     glass: false,
-    message: false,
 })(HeroPage);

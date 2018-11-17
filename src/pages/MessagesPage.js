@@ -23,8 +23,11 @@ class MessagesPage extends Component {
 
 export default withOptionsForm({
     className: "white",
+    loading: false,
+    disabled: false,
     inline: false,
     segment: false,
+    hero: false,
     inset: false,
     light: false,
     glass: false

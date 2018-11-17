@@ -40,6 +40,8 @@ class SegmentsPage extends Component {
 
 export default withOptionsForm({
     className: "white",
+    loading: false,
+    disabled: false,
     inline: false,
     hero: false,
     message: false,

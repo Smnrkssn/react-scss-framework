@@ -27,10 +27,7 @@
 
     .columns {
         margin-right: -$divider3;
-
-        .column {
-            padding: 0 $divider3 $divider3 0;
-        }
+        margin-left: -$divider3;
     }
 
     label {

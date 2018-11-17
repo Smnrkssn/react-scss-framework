@@ -33,6 +33,9 @@ class TooltipPage extends Component {
 export default withOptionsForm({
     className: "white",
     show: true,
+    disabled: false,
+    loading: false,
+    segment: true,
     light: false,
     glass: false,
     inset: false,

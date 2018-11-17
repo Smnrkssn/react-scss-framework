@@ -8,18 +8,6 @@
 @import "resources/variables.scss";
 @import "resources/keyframes.scss";
 
-//import layouts
-@import "layout/segment.scss";
-@import "layout/columns.scss";
-@import "layout/hero.scss";
-@import "layout/padders.scss";
-@import "layout/positioning.scss";
-@import "layout/wrappers.scss";
-@import "layout/containers.scss";
-@import "layout/dividers.scss";
-@import "layout/utils.scss";
-@import "layout/alignment.scss";
-
 //import global
 @import "global/index.scss";
 @import "global/text.scss";
@@ -30,6 +18,7 @@
 @import "global/article.scss";
 
 //import components
+@import "components/loading";
 @import "components/alert.scss";
 @import "components/loader.scss";
 @import "components/tables/index.scss";
@@ -41,6 +30,20 @@
 @import "components/overlay.scss";
 @import "components/slideshow.scss";
 @import "components/tooltip.scss";
+@import "components/disabled.scss";
+
+//import layouts
+@import "layout/padders.scss";
+@import "layout/positioning.scss";
+@import "layout/wrappers.scss";
+@import "layout/containers.scss";
+@import "layout/dividers.scss";
+@import "layout/utils.scss";
+@import "layout/alignment.scss";
+@import "layout/segment.scss";
+@import "layout/columns.scss";
+@import "layout/hero.scss";
+@import "layout/inset.scss";
 
 //import attributes
 @import "attributes/colors.scss";
@@ -55,3 +58,4 @@
 
 //import site-modules
 @import "site-modules/global.scss";
+@import "site-modules/animate.scss";

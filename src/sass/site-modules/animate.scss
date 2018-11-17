@@ -1,0 +1,21 @@
+.sliding-out {
+    z-index: 0;
+    animation-name: sliding-out;
+    will-change: transform;
+}
+
+.sliding-in {
+    z-index: 0;
+    animation-name: sliding-in;
+    will-change: transform;
+}
+
+@keyframes sliding-out {
+    from {transform: translateX(0)}
+    to {transform: translateX(-300%)}
+}
+
+@keyframes sliding-in {
+    from {transform: translateX(300%)}
+    to {transform: translateX(0)}
+}

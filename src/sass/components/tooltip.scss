@@ -9,6 +9,10 @@
         position: absolute;
         z-index: 999;
 
+        &.loading:after {
+            @include setLoadingSize("15px", "2px");
+        }
+
         &:not(.controlled){
             display: none;
         }

@@ -4,4 +4,8 @@
 .hero {
     padding: 48px;
     width: 100%;
+
+    &.loading::after {
+        @include setLoadingSize("50px", "4px");
+    }
 }

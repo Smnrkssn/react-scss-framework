@@ -13,11 +13,16 @@
     &.fixed {
         position: fixed;
         top: 0;
+        left: 0;
         z-index: 1000;
 
         &.scrollable {
             max-height: 100vh;
             overflow: auto;
+        }
+
+        &:not(.inline){
+            right: 0;
         }
     }
 
@@ -66,11 +71,19 @@
     &.right {
         flex-grow: 1;
         justify-content: flex-end;
+
+        &.vertical {
+            text-align: right;
+        }
     }
 
     &.center {
         flex-grow: 1;
         justify-content: center;
+
+        &.vertical {
+            text-align: center;
+        }
     }
 }
 

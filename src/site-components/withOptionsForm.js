@@ -26,12 +26,11 @@ export default (state = null) => (ChildComponent) => (
         renderForm = ({children, ...props}) => {
             return (
                 <Form segment inset className="mb-15" {...props}>
-                    <Columns className="pt-30">
+                    <Columns className="pt-15">
                         {this.state.className && (
-                            <div className="column" size={3}>
+                            <div className="column span-3">
                                 <label>color</label>
                                 <ColorDropdown
-                                    className="inline"
                                     value={this.state.className}
                                     onChange={(event) => {
                                         this.setState({className: event.target.value});
@@ -43,7 +42,7 @@ export default (state = null) => (ChildComponent) => (
                             {Object.keys(this.state)
                                 .filter(state => state !== "className")
                                 .map((state, i) => (
-                                    <div className="column" size={2} key={i}>
+                                    <div className="column span-2 span-3-sm span-4-xs" key={i}>
                                         <label>{state}</label>
                                         <AndroidCheckbox
                                             id={`checkbox-${i}`}

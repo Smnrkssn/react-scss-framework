@@ -5,52 +5,58 @@
     display: flex;
     flex-wrap: wrap;
 
-    .column {
-        padding: $divider3;
-        flex-basis: 0;
-        flex-grow: 1;
-        flex-shrink: 1;
+    &.padder-0 {
+        margin-right: -$divider3;
+        margin-left: -$divider3;
     }
 
-    &.breakpoint {
-        @each $name, $size in $mediaQueries {
-            @media (max-width: $size) {
-                &.#{$name}{
-                    display: block;
-                    .column {
-                        width: inherit;
-                    }
+    @media (max-width: $mediaSmall) {
+        .column {
+            flex: none;
+            width: 100%;
+        }
+
+        &.unstackable .column {
+            width: initial;
+            flex-basis: 0;
+            flex-grow: 1;
+            flex-shrink: 1;
+        }
+    }
+}
+
+.breakpoint {
+    @each $name, $size in $mediaQueries {
+        @media (max-width: $size) {
+            &.#{$name}{
+                .column {
+                    flex: none;
+                    width: 100%;
                 }
             }
         }
     }
+}
+
+.column {
+    padding: $divider3;
+    flex-basis: 0;
+    flex-grow: 1;
+    flex-shrink: 1;
 }
 
 @for $i from 0 through 12 {
-    .columns {
-        .column-#{$i}{
-            @extend .column;
-            flex: none;
-            width: 100% / 12 * $i;
-        }
-
-        @media (max-width: $mediaSmall) {
-            .column-#{$i}{
-                width: inherit;
-            }
-
-            &.unstackable,
-            &.breakpoint {
-                .column-#{$i}{
-                    width: 100% / 12 * $i;
-                }
-            }
-        }
+    .span-#{$i}{
+        flex: none;
+        width: 100% / 12 * $i;
     }
-}
 
-@media (max-width: $mediaSmall) {
-    .columns:not(.unstackable):not(.breakpoint) {
-        display: block;
+    @each $name, $query in $mediaQueries {
+        @media (max-width: $query) {
+            .column.span-#{$i}-#{$name}{
+                flex: none;
+                width: 100% / 12 * $i;
+            }
+        }
     }
 }

@@ -7,10 +7,15 @@ export const Columns = ({
     unstackable = false,
     breakpoint,
     sizes = [],
-    columnProps = {},
     children,
     ...props
 }) => {
+    const filterOutColumnProps = ({columnClass, columnProps, ...props}) => props;
+
+    const isColumn = (child) => {
+        return child.props.className && child.props.className.includes("column");
+    };
+
     const columnsClass = classNames({
         "columns": true,
         "breakpoint": breakpoint,
@@ -20,9 +25,9 @@ export const Columns = ({
         "segment": segment
     }, className, breakpoint);
 
-    const getColumnClass = (index, {size}) => {
-        if(size) return `column-${size}`;
-        return (!sizes[index]) ? "column" : `column-${sizes[index]}`;
+    const getColumnClass = (index, {columnClass}) => {
+        if(columnClass) return `column ${columnClass}`;
+        return (!sizes[index]) ? "column" : `column span-${sizes[index]}`;
     };
 
     return (
@@ -31,13 +36,18 @@ export const Columns = ({
                 .toArray(children)
                 .filter(children => children)
                 .map((child, i) => (
-                    (child.props.className && child.props.className.includes("column")) ? (
-                        React.cloneElement(child, {className: getColumnClass(i, child.props)})
-                    ) : (
-                        <div key={i} className={getColumnClass(i, child.props)} {...columnProps}>
-                            {child}
-                        </div>
-                    )
+                    (isColumn(child))
+                        ? child
+                        : (
+                            <div
+                                key={i}
+                                className={getColumnClass(i, child.props)}
+                                {...child.props.columnProps}
+                            >{React.cloneElement({
+                                ...child,
+                                ...{props: filterOutColumnProps(child.props)}
+                            })}</div>
+                        )
                 ))}
         </div>
     );

@@ -15,7 +15,10 @@ export const joinClassNames = (className1, className2 = "") =>{
 };
 
 export const getOptionalClasses = ({
+    disabled,
     segment,
+    loading,
+    padder,
     message,
     inverted,
     wrapper,
@@ -28,11 +31,14 @@ export const getOptionalClasses = ({
     hero,
     show
 }) => ({
+    "disabled": disabled,
     "segment": segment,
     "message": message,
     "inverted": inverted,
-    [`wrapper-${wrapper}`]: wrapper,
-    [`container-${container}`]: container,
+    "loading": loading,
+    [`wrapper-${wrapper}`]: typeof wrapper === "number",
+    [`container-${container}`]: typeof container === "number",
+    [`padder-${padder}`]: typeof padder === "number",
     "tooltip-container": tooltip,
     "inline": inline,
     "light": light,
@@ -46,6 +52,8 @@ export const getOptionalClasses = ({
 
 export const filterOutOptionalClasses = ({
     segment,
+    loading,
+    padder,
     inverted,
     message,
     wrapper,

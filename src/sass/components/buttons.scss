@@ -9,39 +9,17 @@
     border: none;
     padding: 10px 15px;
     border-radius: 5px;
+
+    &.loading:after {
+        @include setLoadingSize("15px", "2px");
+    }
 	
 	&:focus {
 	    outline: none;
 	}
 
-    &:disabled {
-        cursor: not-allowed;
-    }
-
     &.message {
         border: none;
-    }
-
-    &.loading {
-        content: "";
-        cursor: not-allowed;
-        color: transparent!important;
-        user-select: none;
-
-        &:after {
-            position: absolute;
-            left: calc(50% - (1em / 2));
-            top: calc(50% - (1em / 2));
-            animation: loader-spin .5s infinite linear;
-            border: 2px solid #FFF;
-            border-radius: 100%;
-            border-right-color: transparent;
-            border-top-color: transparent;
-            content: "";
-            display: block;
-            height: 1em;
-            width: 1em;
-        }
     }
 
     @include standardHoverEffect();
@@ -49,10 +27,6 @@
 
 @each $name, $color in $darkColors {
     .button.#{$name}{
-        &:disabled {
-            background-color: lighten($color, 25%);
-        }
-
         &:hover:not(:disabled):not(.loading):not(.message) {
             background-color: darken($color, 8%);
             color: #FFF;
@@ -70,14 +44,9 @@
             @include standardHoverEffect();
 
             &.loading {
-                content: "";
-                cursor: not-allowed;
-                color: transparent;
-
                 &:after {
-                    border: 2px solid $color;
-                    border-right-color: transparent;
-                    border-top-color: transparent;
+                    border-left-color: $color;
+                    border-bottom-color: $color;
                 }
             }
 
