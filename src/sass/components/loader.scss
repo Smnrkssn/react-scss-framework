@@ -25,6 +25,16 @@
                 }
             }
 
+            &.dark {
+                border-top-color: darkToDarker($color);
+                background-color: initial;
+
+                &.inverted {
+                    border-color: darkToDarker($color);
+                    border-top-color: transparent;
+                }
+            }
+
             &.inverted {
                 border-color: $color;
                 border-top-color: transparent;

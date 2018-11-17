@@ -25,9 +25,10 @@ export const Columns = ({
         "segment": segment
     }, className, breakpoint);
 
-    const getColumnClass = (index, {columnClass}) => {
-        if(columnClass) return `column ${columnClass}`;
-        return (!sizes[index]) ? "column" : `column span-${sizes[index]}`;
+    const getColumnClass = (index, {columnClass, className = ""} = {}) => {
+        let name = (className.includes("column")) ? className : "column";
+        if(columnClass) return `${name} ${columnClass}`;
+        return (!sizes[index]) ? name : `${name} span-${sizes[index]}`;
     };
 
     return (
@@ -37,7 +38,9 @@ export const Columns = ({
                 .filter(children => children)
                 .map((child, i) => (
                     (isColumn(child))
-                        ? child
+                        ? React.cloneElement(child, {
+                            className: getColumnClass(i, child.props)
+                        })
                         : (
                             <div
                                 key={i}

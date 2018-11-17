@@ -30,21 +30,21 @@ class FormsPage extends Component {
                 </Form>
                 <h2>Form columns <p className="normal">Based on the Columns API</p></h2>
                 <Form className="container-4 mb-30">
-                    <Form.Columns>
-                        <div className="column" size={4}>
+                    <Form.Columns sizes={[4, 3, 5, null, 6, 3]}>
+                        <div className="column">
                             <label>4/12</label>
                             <input type="text" placeholder="4/12"/>
                         </div>
                         <label>3/12</label>
-                        <input type="text" placeholder="3/12" size={3}/>
+                        <input type="text" placeholder="3/12"/>
                         <label>5/12</label>
-                        <input type="text" placeholder="5/12" size={5}/>
+                        <input type="text" placeholder="5/12"/>
                         <label>Auto</label>
                         <input type="text" placeholder="auto"/>
                         <label>6/12</label>
-                        <input type="text" placeholder="6/12" size={6}/>
+                        <input type="text" placeholder="6/12"/>
                         <label>3/12</label>
-                        <input type="text" placeholder="3/12" size={3}/>
+                        <input type="text" placeholder="3/12"/>
                     </Form.Columns>
                 </Form>
                 <h2>Bouncing Checkboxes</h2>

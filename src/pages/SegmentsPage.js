@@ -47,5 +47,6 @@ export default withOptionsForm({
     message: false,
     inset: false,
     light: false,
+    dark: false,
     glass: false,
 })(SegmentsPage);

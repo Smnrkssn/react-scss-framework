@@ -28,4 +28,6 @@ Tooltip.Container = ({className, children, ...props}) => (
     </div>
 );
 
+Tooltip.Container.displayName = "Tooltip.Container";
+
 export default Tooltip;

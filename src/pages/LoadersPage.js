@@ -41,5 +41,6 @@ class LoadersPage extends Component {
 
 export default withOptionsForm({
     inverted: false,
-    light: false
+    light: false,
+    dark: false
 })(LoadersPage);

@@ -54,6 +54,7 @@ export default withOptionsForm({
     center: false,
     fixed: false,
     light: false,
+    dark: false,
     glass: false,
     segment: false,
     hero: false,

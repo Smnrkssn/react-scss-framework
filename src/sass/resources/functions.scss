@@ -38,6 +38,10 @@
     @return darken($lightColor, 5%);
 }
 
+@function lightToDark($lightColor, $name: ""){
+    @return darken($lightColor, 10%);
+}
+
 /*----------------------------------------
  * Glass colors
  *----------------------------------------*/

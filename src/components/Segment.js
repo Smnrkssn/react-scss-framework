@@ -22,4 +22,6 @@ Segment.List = ({className = "", children, ...props}) => (
     </div>
 );
 
+Segment.List.displayName = "Segment.List";
+
 export default Segment;

@@ -8,7 +8,7 @@
         background-color: lighten($color, 25%);
 
         &.light {
-            background-color: #f3f5f7;
+            background-color: $gray;
             color: #999;
         }
     }
@@ -16,7 +16,7 @@
 
 @each $name, $color in $lightColors {
     .#{$name}.disabled {
-        background-color: #f3f5f7;
+        background-color: $gray;
         color: #888;
     }
 }

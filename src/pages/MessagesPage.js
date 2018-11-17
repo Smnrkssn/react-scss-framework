@@ -30,5 +30,6 @@ export default withOptionsForm({
     hero: false,
     inset: false,
     light: false,
+    dark: false,
     glass: false
 })(MessagesPage);

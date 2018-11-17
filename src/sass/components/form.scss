@@ -28,6 +28,10 @@
     .columns {
         margin-right: -$divider3;
         margin-left: -$divider3;
+
+        .column {
+            padding-top: 0;
+        }
     }
 
     label {

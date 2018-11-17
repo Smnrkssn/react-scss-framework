@@ -15,6 +15,15 @@
             background-color: glassColor($color);
         }
 
+        &.dark {
+            background-color: darkToDarker($color);
+            color: #FFF;
+
+            &.glass {
+                background-color: glassColor(darkToDarker($color));
+            }
+        }
+
         &.light {
             background-color: darkToLight($color, $name);
             color: #000;
@@ -36,6 +45,15 @@
             color: #FFF;
         }
 
+        &.dark {
+            background-color: darkToDarker($color);
+            color: #FFF;
+
+            &.glass {
+                background-color: glassColor(darkToDarker($color));
+            }
+        }
+
         &.light {
             background-color: darkToLight($color, $name);
             color: #000;
@@ -51,6 +69,15 @@
     .#{$name}{
         background-color: $color;
         color: #000;
+
+        &.dark {
+            background-color: lightToDark($color, $name);
+            color: #000;
+
+            &.glass {
+                background-color: glassColor(lightToDark($color, $name));
+            }
+        }
 
         &.glass {
             background-color: glassColor($color);

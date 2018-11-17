@@ -36,4 +36,6 @@ Form.Columns = ({children, ...props}) => {
     );
 };
 
+Form.Columns.displayName = "Form.Columns";
+
 export default Form;

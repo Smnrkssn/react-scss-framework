@@ -52,6 +52,7 @@ export default withOptionsForm({
     message: false,
     segment: false,
     inset: false,
+    dark: false,
     light: false,
     glass: false,
 })(HeroPage);
