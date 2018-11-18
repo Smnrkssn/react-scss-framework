@@ -6,6 +6,7 @@ export const routes = {
     buttonsPage: "/buttons",
     columnsPage: "/columns",
     formsPage: "/forms",
+    gridPage: "/grid",
     heroPage: "/hero",
     homePage: "/",
     loadersPage: "/loaders",

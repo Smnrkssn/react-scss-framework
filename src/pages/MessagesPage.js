@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import {Message} from "../components/Message";
 import {Page} from "../site-components/Page";
 import withOptionsForm from "../site-components/withOptionsForm";
+import SourceContainer from "../components/SourceContainer";
 
 class MessagesPage extends Component {
     render() {
@@ -10,12 +11,16 @@ class MessagesPage extends Component {
                 <h2>Messages</h2>
                 <hr/>
                 {this.props.renderForm({})}
-                <Message
-                    {...this.props.options}
-                    className={`${this.props.options.className} mb-15`}
-                    heading={`Sample message`}
-                    list={["Sample content"]}
-                />
+                <SourceContainer editorProps={{
+                    height: "200px"
+                }}>
+                    <Message
+                        {...this.props.options}
+                        className={`${this.props.options.className} mb-15`}
+                        heading={`Sample message`}
+                        list={["Sample content"]}
+                    />
+                </SourceContainer>
             </Page>
         );
     }

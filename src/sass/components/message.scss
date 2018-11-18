@@ -5,22 +5,15 @@
     position: relative;
     padding: 15px 20px;
     border-radius: 5px;
-    border: 1px solid #BFBFC0;
-    background-color: #f8f8f9;
-    color: $black;
+    border: 1px solid lightToDark($gray);
+    background-color: $gray;
     transition: .1s linear;
     font-weight: lighter;
-    font-size: 16px;
 
     .heading {
         font-weight: normal;
-        font-size: 18px;
+        font-size: $heading;
         margin-bottom: 5px;
-    }
-
-    > ul {
-        margin: 0;
-        padding-left: 20px;
     }
 
     > * {
@@ -34,7 +27,7 @@
         background-color: glassToLight($color);
         color: darkToDarker($color);
 
-        &.loading:after {
+        &.loading:not(.dark):after {
             border-left-color: darkToDarker($color);
             border-bottom-color: darkToDarker($color);
         }

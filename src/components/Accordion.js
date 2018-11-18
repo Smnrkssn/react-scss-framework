@@ -1,6 +1,6 @@
 import React, {Component, Fragment} from "react";
 import {Menu} from "./Menu";
-import {classNames} from "../services/className";
+import {classNames, getOptionalClasses, filterOutOptionalClasses} from "../services/className";
 
 class Accordion extends Component {
     static Toggle = ({content, ...props}) => (
@@ -13,6 +13,7 @@ class Accordion extends Component {
 
     getToggleClass = (i, {className}) => classNames({
         "menu-item": true,
+        "accordion-toggle": true,
         "active": this.state.elementsToShow.includes(i)
     }, className);
 
@@ -27,10 +28,15 @@ class Accordion extends Component {
     })));
 
     render(){
-        const {children, ...props} = this.props;
+        const {className, children, ...props} = this.props;
+
+        const accordionClass = classNames({
+            "accordion": true,
+            ...getOptionalClasses(props)
+        }, className);
 
         return (
-            <Menu vertical {...props}>
+            <Menu vertical className={accordionClass} {...filterOutOptionalClasses(props)}>
                 {React.Children.map(children, (child, i) => (
                     <Fragment key={i}>
                         {React.cloneElement(child, {
@@ -42,9 +48,12 @@ class Accordion extends Component {
                         {(child.props.onClick) ? (
                             child.props.children
                         ) : (
-                            <div className={this.getContentClass(i)}>
-                                {child.props.children}
-                            </div>
+                            React.cloneElement(child.props.children, {
+                                className: classNames(
+                                    this.getContentClass(i),
+                                    child.props.children.props.className
+                                )
+                            })
                         )}
                     </Fragment>
                 ))}
@@ -52,5 +61,7 @@ class Accordion extends Component {
         );
     }
 }
+
+Accordion.Toggle.displayName = "Accordion.Toggle";
 
 export default Accordion;

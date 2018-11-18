@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import {Page} from "../site-components/Page";
 import AlertOptionPane from "../components/Alert/AlertOptionPane";
 import {Button} from "../components/Button";
+import {Columns} from "../components/Columns";
 
 class AlertsPage extends Component {
     render() {
@@ -9,7 +10,7 @@ class AlertsPage extends Component {
             <Page>
                 <h2>Alerts</h2>
                 <hr/>
-                <div className="divider-3">
+                <Columns padder={0} container={3} sizes={[4, 4, 4]}>
                     <Button message className="danger" onClick={() =>
                         AlertOptionPane.showErrorAlert({
                             message: "Sample message"
@@ -17,8 +18,6 @@ class AlertsPage extends Component {
                     }>
                         Show Error Alert
                     </Button>
-                </div>
-                <div className="divider-3">
                     <Button message className="info" onClick={() =>
                         AlertOptionPane.showInfoAlert({
                             message: "Sample message"
@@ -26,8 +25,6 @@ class AlertsPage extends Component {
                     }>
                         Show Info Alert
                     </Button>
-                </div>
-                <div className="divider-3">
                     <Button message className="success" onClick={() =>
                         AlertOptionPane.showSuccessAlert({
                             message: "Sample message"
@@ -35,8 +32,8 @@ class AlertsPage extends Component {
                     }>
                         Show Success Alert
                     </Button>
-                </div>
-                <div className="divider-3">
+                </Columns>
+                <Columns padder={0} container={3} sizes={[4, 4]}>
                     <Button message className="warning" onClick={() =>
                         AlertOptionPane.showWarningAlert({
                             message: "Sample message"
@@ -44,8 +41,6 @@ class AlertsPage extends Component {
                     }>
                         Show Warning Alert
                     </Button>
-                </div>
-                <div className="divider-3">
                     <Button message onClick={() =>
                         AlertOptionPane.showPlainAlert({
                             message: "Sample message"
@@ -53,7 +48,7 @@ class AlertsPage extends Component {
                     }>
                         Show Plain Alert
                     </Button>
-                </div>
+                </Columns>
             </Page>
         );
     }

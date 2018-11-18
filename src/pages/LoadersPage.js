@@ -5,6 +5,7 @@ import {darkColors} from "../services/colors";
 import Segment from "../components/Segment";
 import {Columns} from "../components/Columns";
 import withOptionsForm from "../site-components/withOptionsForm";
+import SourceContainer from "../components/SourceContainer";
 
 const sizes = ["huge", "large", "medium", "small", "tiny"];
 
@@ -19,18 +20,20 @@ class LoadersPage extends Component {
                     {darkColors.map((color, i) => (
                         <Segment key={i}>
                             <h3>{color} loaders</h3>
-                            <Columns sizes={[3, 2, 2, 2, 2]}>
-                                {sizes.map((size, j) => (
-                                    <div className="column" key={j}>
-                                        <h4>{size}</h4>
-                                        <Loader
-                                            size={size}
-                                            {...this.props.options}
-                                            className={`${color}`}
-                                        />
-                                    </div>
-                                ))}
-                            </Columns>
+                            <SourceContainer>
+                                <Columns sizes={[3, 2, 2, 2, 2]}>
+                                    {sizes.map((size, j) => (
+                                        <div className="column" key={j}>
+                                            <h4>{size}</h4>
+                                            <Loader
+                                                size={size}
+                                                {...this.props.options}
+                                                className={`${color}`}
+                                            />
+                                        </div>
+                                    ))}
+                                </Columns>
+                            </SourceContainer>
                         </Segment>
                     ))}
                 </Segment.List>

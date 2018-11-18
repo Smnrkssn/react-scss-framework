@@ -1,3 +1,7 @@
+body {
+    font-size: $text;
+}
+
 h1, h2, h3, h4, h5, h6 {
     margin-top: 0;
     margin-bottom: $divider3;
@@ -15,7 +19,6 @@ p {
 
 p, span, ul, ol, code, pre {
     margin-top: 0;
-    font-size: $p;
 
     a {
         color: darken($bPrimary, 10%);

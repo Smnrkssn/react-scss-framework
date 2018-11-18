@@ -7,6 +7,10 @@ class HomePage extends Component {
             <Page>
                 <h2>React SCSS Framework</h2>
                 <hr/>
+                <p>
+                    This is a Desktop-First React SCSS Framework built to match a single
+                    developers preferences.
+                </p>
             </Page>
         );
     }

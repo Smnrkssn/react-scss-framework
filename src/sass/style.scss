@@ -16,6 +16,7 @@
 @import "global/code.scss";
 @import "global/pre.scss";
 @import "global/article.scss";
+@import "global/input.scss";
 
 //import components
 @import "components/loading";
@@ -31,6 +32,8 @@
 @import "components/slideshow.scss";
 @import "components/tooltip.scss";
 @import "components/disabled.scss";
+@import "components/accordion.scss";
+@import "components/source-container.scss";
 
 //import layouts
 @import "layout/padders.scss";

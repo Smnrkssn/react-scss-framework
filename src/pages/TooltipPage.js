@@ -1,9 +1,9 @@
 import React, {Component} from "react";
 import {Page} from "../site-components/Page";
-import Form from "../components/Form";
 import Tooltip from "../components/Tooltip";
 import Segment from "../components/Segment";
 import withOptionsForm from "../site-components/withOptionsForm";
+import SourceContainer from "../components/SourceContainer";
 
 class TooltipPage extends Component {
     render(){
@@ -11,20 +11,23 @@ class TooltipPage extends Component {
             <Page>
                 <h2>Tooltips</h2>
                 <hr/>
-                <Form className="container-4 mb-15">
+                <SourceContainer>
                     <Tooltip.Container>
                         <input type="text" placeholder="Hover over me!"/>
                         <Tooltip>I'm a default tooltip</Tooltip>
                     </Tooltip.Container>
-                </Form>
+                </SourceContainer>
+                <hr/>
                 <h2>Controlled Tooltip</h2>
                 {this.props.renderForm({})}
-                <Segment tooltip inset className="mt-30">
-                    I have a tooltip
-                    <Tooltip {...this.props.options}>
-                        I'm a controlled tooltip
-                    </Tooltip>
-                </Segment>
+                <SourceContainer>
+                    <Segment tooltip inset className="mt-30">
+                        I have a tooltip
+                        <Tooltip {...this.props.options}>
+                            I'm a controlled tooltip
+                        </Tooltip>
+                    </Segment>
+                </SourceContainer>
             </Page>
         );
     }

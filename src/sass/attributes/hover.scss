@@ -4,9 +4,9 @@
 @each $name, $color in $colors {
     .hover-#{$name}:hover {
         color: $color;
+    }
 
-        a:hover {
-            color: $color;
-        }
+    .hover-bg-#{$name}:hover{
+        background-color: $color;
     }
 }

@@ -62,6 +62,10 @@ class MainMenu extends Component {
                    className={location.pathname === routes.formsPage ? "active" : ""}>
                     Forms
                 </a>
+                <a href={routes.gridPage} 
+                   className={location.pathname === routes.gridPage ? "active" : ""}>
+                    Grid
+                </a>
                 <a href={routes.heroPage} 
                    className={location.pathname === routes.heroPage ? "active" : ""}>
                     Hero

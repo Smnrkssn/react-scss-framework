@@ -28,7 +28,7 @@ export const Columns = ({
     const getColumnClass = (index, {columnClass, className = ""} = {}) => {
         let name = (className.includes("column")) ? className : "column";
         if(columnClass) return `${name} ${columnClass}`;
-        return (!sizes[index]) ? name : `${name} span-${sizes[index]}`;
+        return (typeof sizes[index] !== "number") ? name : `${name} span-${sizes[index]}`;
     };
 
     return (

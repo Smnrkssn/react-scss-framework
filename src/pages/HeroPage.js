@@ -3,6 +3,7 @@ import {Page} from "../site-components/Page";
 import Segment from "../components/Segment";
 import {Hero} from "../components/Hero";
 import withOptionsForm from "../site-components/withOptionsForm";
+import SourceContainer from "../components/SourceContainer";
 
 class HeroPage extends Component {
     render() {
@@ -12,9 +13,13 @@ class HeroPage extends Component {
                 <hr/>
                 <section id="hero">
                     {this.props.renderForm({})}
-                    <Hero {...this.props.options}>
-                        <h2 className="lighter mb-0">Hero Container</h2>
-                    </Hero>
+                    <SourceContainer editorProps={{
+                        height: "200px"
+                    }}>
+                        <Hero {...this.props.options}>
+                            <h2 className="lighter mb-0">Hero Container</h2>
+                        </Hero>
+                    </SourceContainer>
                 </section>
                 <section id="hero-with-height-adjustments">
                     <h3 className="mt-30">Hero with height adjustments</h3>

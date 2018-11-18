@@ -7,6 +7,7 @@ import ArticlePage from "./pages/ArticlePage";
 import ButtonsPage from "./pages/ButtonsPage";
 import ColumnsPage from "./pages/ColumnsPage";
 import FormsPage from "./pages/FormsPage";
+import GridPage from "./pages/GridPage";
 import HeroPage from "./pages/HeroPage";
 import HomePage from "./pages/HomePage";
 import LoadersPage from "./pages/LoadersPage";
@@ -31,6 +32,7 @@ export const Router = () => {
                 <Route exact path={routes.buttonsPage} component={ButtonsPage}/>
                 <Route exact path={routes.columnsPage} component={ColumnsPage}/>
                 <Route exact path={routes.formsPage} component={FormsPage}/>
+                <Route exact path={routes.gridPage} component={GridPage}/>
                 <Route exact path={routes.heroPage} component={HeroPage}/>
                 <Route exact path={routes.homePage} component={HomePage}/>
                 <Route exact path={routes.loadersPage} component={LoadersPage}/>

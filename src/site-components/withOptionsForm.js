@@ -25,7 +25,7 @@ export default (state = null) => (ChildComponent) => (
 
         renderForm = ({children, ...props}) => {
             return (
-                <Form segment inset className="mb-15" {...props}>
+                <Form message className="white mb-15" {...props}>
                     <Columns className="pt-15">
                         {this.state.className && (
                             <div className="column span-3">
@@ -38,7 +38,7 @@ export default (state = null) => (ChildComponent) => (
                                 />
                             </div>
                         )}
-                        <Columns>
+                        <Columns className="pl-30">
                             {Object.keys(this.state)
                                 .filter(state => state !== "className")
                                 .map((state, i) => (

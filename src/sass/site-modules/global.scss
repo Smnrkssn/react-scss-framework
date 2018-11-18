@@ -18,9 +18,10 @@ body {
         min-height: initial;
         max-height: initial;
         overflow-y: initial;
+        padding-bottom: 96px;
     }
 
-    #page > .columns > .column {
+    #page > .column {
         padding: 0;
     }
 }

@@ -3,6 +3,7 @@ import {Page} from "../site-components/Page";
 import {Menu} from "../components/Menu";
 import HidingMenu from "../components/HidingMenu";
 import withOptionsForm from "../site-components/withOptionsForm";
+import SourceContainer from "../components/SourceContainer";
 
 class MenusPage extends Component {
     render(){
@@ -11,35 +12,41 @@ class MenusPage extends Component {
                 <h2>Menus</h2>
                 <hr/>
                 {this.props.renderForm({})}
-                <Menu
-                    className={`vertical-sm inline-sm ${this.props.options.className} mb-7`}
-                    {...this.props.options}
-                >
-                    <a href="#page">Item 1</a>
-                    <a href="#page">Item 2</a>
-                    <a href="#page">Item 3</a>
-                    <a href="#page">Item 4</a>
-                </Menu>
-                <h2 className="mt-30">Nested Menus</h2>
-                <Menu className={`vertical-sm secondary mb-7`}>
-                    <a href="#page">Item 1</a>
-                    <a href="#page">Item 2</a>
-                    <a href="#page">Item 3</a>
-                    <a href="#page">Item 4</a>
-                    <Menu right className={`vertical-sm`}>
+                <SourceContainer>
+                    <Menu
+                        className={`vertical-sm inline-sm ${this.props.options.className} mb-7`}
+                        {...this.props.options}
+                    >
                         <a href="#page">Item 1</a>
                         <a href="#page">Item 2</a>
                         <a href="#page">Item 3</a>
                         <a href="#page">Item 4</a>
                     </Menu>
-                </Menu>
+                </SourceContainer>
+                <h2 className="mt-30">Nested Menus</h2>
+                <SourceContainer>
+                    <Menu className={`vertical-sm secondary mb-7`}>
+                        <a href="#page">Item 1</a>
+                        <a href="#page">Item 2</a>
+                        <a href="#page">Item 3</a>
+                        <a href="#page">Item 4</a>
+                        <Menu right className={`vertical-sm`}>
+                            <a href="#page">Item 1</a>
+                            <a href="#page">Item 2</a>
+                            <a href="#page">Item 3</a>
+                            <a href="#page">Item 4</a>
+                        </Menu>
+                    </Menu>
+                </SourceContainer>
                 <h2 className="mt-30">Hiding Menu</h2>
-                <HidingMenu>
-                    <a href="#page">Item 1</a>
-                    <a href="#page">Item 2</a>
-                    <a href="#page">Item 3</a>
-                    <a href="#page">Item 4</a>
-                </HidingMenu>
+                <SourceContainer>
+                    <HidingMenu>
+                        <a href="#page">Item 1</a>
+                        <a href="#page">Item 2</a>
+                        <a href="#page">Item 3</a>
+                        <a href="#page">Item 4</a>
+                    </HidingMenu>
+                </SourceContainer>
             </Page>
         );
     }

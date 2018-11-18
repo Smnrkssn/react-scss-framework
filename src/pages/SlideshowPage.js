@@ -3,6 +3,7 @@ import {Page} from "../site-components/Page";
 import Slideshow from "../components/Slideshow";
 import {AnimationDropdown} from "../components/AnimationDropdown";
 import Form from "../components/Form";
+import SourceContainer from "../components/SourceContainer";
 
 class SlideshowPage extends Component {
     state = {
@@ -32,17 +33,19 @@ class SlideshowPage extends Component {
                         }}/>
                     </Form.Columns>
                 </Form>
-                <Slideshow {...this.state} wrapper={5}>
-                    <div>
-                        <h1 className="mb-0">Slide 1</h1>
-                    </div>
-                    <div>
-                        <h1 className="mb-0">Slide 2</h1>
-                    </div>
-                    <div>
-                        <h1 className="mb-0">Slide 3</h1>
-                    </div>
-                </Slideshow>
+                <SourceContainer>
+                    <Slideshow {...this.state} wrapper={5}>
+                        <div>
+                            <h1 className="mb-0">Slide 1</h1>
+                        </div>
+                        <div>
+                            <h1 className="mb-0">Slide 2</h1>
+                        </div>
+                        <div>
+                            <h1 className="mb-0">Slide 3</h1>
+                        </div>
+                    </Slideshow>
+                </SourceContainer>
             </Page>
         );
     }

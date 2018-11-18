@@ -1,5 +1,5 @@
 //----------------------------------------------
-// 1.0 Colors
+// Colors
 //----------------------------------------------
 $primary   : #d59541;
 $secondary : #545b62;
@@ -8,7 +8,7 @@ $black     : #000000;
 $gray      : #f3f5f7;
 
 //----------------------------------------------
-// 1.1 Bootstrap Colors
+// Bootstrap Colors
 //----------------------------------------------
 $bBlue      : #007bff;
 $bIndigo    : #6610f2;
@@ -31,7 +31,7 @@ $bWarning   : #d39e00;
 $bInfo      : #17a2b8;
 
 //----------------------------------------------
-// 1.2 Color Maps
+// Color Maps
 //----------------------------------------------
 $darkColors: (
     (primary     $primary)
@@ -63,28 +63,36 @@ $lightColors: (
 $colors: join($darkColors, $lightColors);
 
 //----------------------------------------------
-// 2.0 Fonts
+// Fonts
 //----------------------------------------------
 $primaryFont: "Open Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
 $fontAwesome: "Font Awesome 5 Free";
 
 //----------------------------------------------
-// 3.0 Site Variables
+// Headings
 //----------------------------------------------
-//3.1 Headings
-$display1: 52px;
-$display2: 48px;
-$display3: 44px;
-$display4: 40px;
-$display5: 36px;
-$display6: 32px;
 $h1: 28px;
 $h2: 28px;
 $h3: 24px;
 $h4: 20px;
 $h5: 16px;
 $h6: 14px;
-$p: 18px;
+$h7: 12px;
+$h8: 10px;
+$heading: 18px;
+$text: 16px;
+
+$headingList: ($h1 $h2 $h3 $h4 $h5 $h6 $h7 $h8);
+
+//----------------------------------------------
+// Display Headings
+//----------------------------------------------
+$display1: 52px;
+$display2: 48px;
+$display3: 44px;
+$display4: 40px;
+$display5: 36px;
+$display6: 32px;
 
 $displayList: (
     $display1
@@ -95,16 +103,9 @@ $displayList: (
     $display6
 );
 
-$headingList: (
-    $h1
-    $h2
-    $h3
-    $h4
-    $h5
-    $h6
-);
-
-//3.2 Wrappers
+//----------------------------------------------
+// Wrappers
+//----------------------------------------------
 $wrapper1: 1200px;
 $wrapper2: 992px;
 $wrapper3: 768px;
@@ -121,38 +122,37 @@ $wrapperList: (
     $wrapper6
 );
 
-//3.3 Dividers
+//----------------------------------------------
+// Dividers
+//----------------------------------------------
 $divider1: 45px;
 $divider2: 30px;
 $divider3: 15px;
 $divider4: 7.5px;
 $divider5: 5px;
+$divider6: 2.5px;
 
 $dividerList: (
     $divider1
     $divider2
     $divider3
     $divider4
+    $divider5
+    $divider6
 );
 
 //----------------------------------------------
-// 4.0 Media Queries
+// Media Queries
 //----------------------------------------------
-// $mediaXLarge  - 1600px
-// $mediaLarge   - 1200px
-// $mediaMedium  - 992px
-// $mediaSmall   - 768px
-// $mediaXSmall  - 576px
-// $mediaXXSmall - 436px
-//----------------------------------------------
+$mediaXLarge  : 1600px;
 $mediaLarge   : 1200px;
 $mediaMedium  : 992px;
 $mediaSmall   : 768px;
 $mediaXSmall  : 576px;
 $mediaXXSmall : 0;
 
-// 6.1 Media Query Map
 $mediaQueries: (
+    (xlg $mediaXLarge)
     (lg  $mediaLarge)
     (md  $mediaMedium)
     (sm  $mediaSmall)
