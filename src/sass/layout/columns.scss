@@ -4,11 +4,8 @@
 .columns {
     display: flex;
     flex-wrap: wrap;
-
-    &.padder-0 {
-        margin-right: -$divider3;
-        margin-left: -$divider3;
-    }
+    margin-right: -$divider3;
+    margin-left: -$divider3;
 
     @media (max-width: $mediaSmall) {
         .column {

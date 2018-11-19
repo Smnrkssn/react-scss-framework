@@ -71,7 +71,7 @@ class ColumnsPage extends Component {
                 <hr/>
                 <h2 className="mb-0">Custom breakpoint</h2>
                 <SourceContainer>
-                    <Columns sizes={[4, null, 5]} breakpoint="md">
+                    <Columns sizes={[4, "auto", 5]} breakpoint="md">
                         <Segment className="secondary">
                             <h2 className="mb-0">4/12</h2>
                         </Segment>
@@ -86,7 +86,7 @@ class ColumnsPage extends Component {
                 <hr/>
                 <h2 className="mb-0">Column sizing at specific breakpoint</h2>
                 <SourceContainer>
-                    <Columns padder={0}>
+                    <Columns>
                         <Segment className="secondary" columnClass="span-7-md">
                             <p className="mb-0">auto large, 7/12 medium</p>
                         </Segment>

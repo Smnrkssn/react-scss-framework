@@ -15,12 +15,20 @@
 
 .fixed {
     @include fixed();
+}
 
-    @each $name, $query in $mediaQueries {
-        @media (max-width: $query) {
-            &-#{$name} {
-                @include fixed();
-            }
+.static {
+    position: static;
+}
+
+@each $name, $query in $mediaQueries {
+    @media (max-width: $query) {
+        .fixed-#{$name} {
+            @include fixed();
+        }
+
+        .static-#{$name}{
+            position: static;
         }
     }
 }
