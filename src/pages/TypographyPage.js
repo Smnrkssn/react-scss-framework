@@ -6,7 +6,7 @@ class TypographyPage extends Component {
     render() {
         return (
             <div id="page">
-                <div className="columns block-md">
+                <div className="flex block-md">
                     <MainMenu/>
                     <div className="column">
                         <Segment.List>

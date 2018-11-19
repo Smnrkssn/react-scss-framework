@@ -35,15 +35,9 @@ class SlideshowPage extends Component {
                 </Form>
                 <SourceContainer>
                     <Slideshow {...this.state} wrapper={5}>
-                        <div>
-                            <h1 className="mb-0">Slide 1</h1>
-                        </div>
-                        <div>
-                            <h1 className="mb-0">Slide 2</h1>
-                        </div>
-                        <div>
-                            <h1 className="mb-0">Slide 3</h1>
-                        </div>
+                        <h1 className="mb-0">Slide 1</h1>
+                        <h1 className="mb-0">Slide 2</h1>
+                        <h1 className="mb-0">Slide 3</h1>
                     </Slideshow>
                 </SourceContainer>
             </Page>

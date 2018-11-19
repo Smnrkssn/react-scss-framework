@@ -108,7 +108,7 @@
             .menu-item:hover,
             .menu-item:active,
             .menu-item.active {
-                background-color: $color;
+                background-color: lighten($color, 5%);
             }
         }
     }

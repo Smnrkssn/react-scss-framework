@@ -3,13 +3,21 @@ import {Menu} from "./Menu";
 import {classNames, getOptionalClasses, filterOutOptionalClasses} from "../services/className";
 
 class Accordion extends Component {
+    static defaultProps = {
+        initialElementsToShow: []
+    };
+
     static Toggle = ({content, ...props}) => (
         <div {...props}>{content}</div>
     );
 
-    state = {
-        elementsToShow: []
-    };
+    constructor(props){
+        super(props);
+
+        this.state = {
+            elementsToShow: props.initialElementsToShow
+        };
+    }
 
     getToggleClass = (i, {className}) => classNames({
         "menu-item": true,
@@ -28,7 +36,7 @@ class Accordion extends Component {
     })));
 
     render(){
-        const {className, children, ...props} = this.props;
+        const {className, children, initialElementsToShow, ...props} = this.props;
 
         const accordionClass = classNames({
             "accordion": true,
@@ -51,7 +59,9 @@ class Accordion extends Component {
                             React.cloneElement(child.props.children, {
                                 className: classNames(
                                     this.getContentClass(i),
-                                    child.props.children.props.className
+                                    (child.props.children.props)
+                                        ? child.props.children.props.className
+                                        : ""
                                 )
                             })
                         )}

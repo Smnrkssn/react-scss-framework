@@ -21,9 +21,9 @@
 
 @function darkHover($darkColor, $name: ""){
     @if $name == black {
-        @return lighten($darkColor, 10%);
+        @return lighten($darkColor, 5%);
     } @else {
-        @return darken($darkColor, 10%);
+        @return darken($darkColor, 5%);
     }
 }
 
