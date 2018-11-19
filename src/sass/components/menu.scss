@@ -5,22 +5,9 @@
     position: relative;
     display: flex;
     font-weight: lighter;
-
-    &:not(.vertical){
-        flex-wrap: wrap;
-    }
+    flex-wrap: wrap;
 
     &.fixed {
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: 1000;
-
-        &.scrollable {
-            max-height: 100vh;
-            overflow: auto;
-        }
-
         &:not(.inline){
             right: 0;
         }
@@ -54,6 +41,7 @@
 
     &.vertical {
         flex-direction: column;
+        flex-wrap: initial;
     }
 
     &.inline {

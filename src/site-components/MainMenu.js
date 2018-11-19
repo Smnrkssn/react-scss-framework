@@ -3,9 +3,14 @@ import {routes} from "../routes";
 import HidingMenu from "../components/HidingMenu";
 import {joinClassNames} from "../services/className";
 import {withRouter} from 'react-router-dom';
+import $ from "jquery";
 
 class MainMenu extends Component {
     withoutRouterExtras = ({history, match, staticContext, ...props}) => props;
+
+    componentWillUnmount(){
+        $("body").removeClass("prevent-scroll-md");
+    }
 
     render(){
         const {
@@ -27,6 +32,15 @@ class MainMenu extends Component {
                 }}
                 mobileMenuItemClass="grow"
                 className={joinClassNames("fixed static-md w-25", className)}
+                stateReducer={(state, changes) => {
+                    if(changes.showMenu){
+                        $("body").addClass("prevent-scroll-md");
+                    } else {
+                        $("body").removeClass("prevent-scroll-md");
+                    }
+
+                    return changes;
+                }}
                 {...props}
             >
                 <h3 className="effectless menu-item">

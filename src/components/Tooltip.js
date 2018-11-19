@@ -7,6 +7,7 @@ const Tooltip = ({
     right,
     bottom,
     left = true,
+    center,
     className,
     children,
     ...props
@@ -17,6 +18,7 @@ const Tooltip = ({
         "right": right,
         "bottom": bottom,
         "left": left && !right,
+        "center": center,
         ...getOptionalClasses(props),
         "segment": segment
     }, className)} {...filterOutOptionalClasses(props)}>{children}</div>

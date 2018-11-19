@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React, {Component, Fragment} from "react";
 import {Page} from "../site-components/Page";
 import {BouncingCheckbox, AndroidCheckbox} from "../components/Checkboxes";
 import {darkColors} from "../services/colors";
@@ -57,16 +57,16 @@ class FormsPage extends Component {
                     <hr/>
                     <h2>Bouncing Checkboxes</h2>
                     <SourceContainer>
-                        <div>
+                        <Fragment>
                             {darkColors.map((color, i) => (
                                 <BouncingCheckbox className={color} defaultChecked={true} key={i}/>
                             ))}
-                        </div>
+                        </Fragment>
                     </SourceContainer>
                     <hr/>
                     <h2>Android Checkboxes</h2>
                     <SourceContainer>
-                        <div>
+                        <Fragment>
                             {darkColors.map((color, i) => (
                                 <AndroidCheckbox
                                     id={`checkbox-${i}`}
@@ -74,7 +74,7 @@ class FormsPage extends Component {
                                     defaultChecked={true} key={i}
                                 />
                             ))}
-                        </div>
+                        </Fragment>
                     </SourceContainer>
                 </div>
             </Page>

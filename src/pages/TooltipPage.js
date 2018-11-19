@@ -42,9 +42,9 @@ export default withOptionsForm({
     dark: false,
     glass: false,
     inset: false,
-    hero: false,
     top: true,
     left: true,
     bottom: false,
-    right: false
+    right: false,
+    center: false
 })(TooltipPage);

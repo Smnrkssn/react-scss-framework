@@ -1,6 +1,32 @@
 /*----------------------------------------
  * Positioning
  *----------------------------------------*/
+.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+    &.scrollable {
+        max-height: 100vh;
+        overflow: auto;
+    }
+}
+
+body.prevent-scroll {
+    overflow: hidden;
+    min-height: 100vh;
+}
+
+@each $name, $query in $mediaQueries {
+    @media (max-width: $query){
+        body.prevent-scroll-#{$name} {
+            overflow: hidden;
+            min-height: 100vh;
+        }
+    }
+}
+
 @mixin normalizePosition(){
     position: static;
     bottom: initial;

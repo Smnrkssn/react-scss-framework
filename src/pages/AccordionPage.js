@@ -1,4 +1,4 @@
-import React, {Component, Fragment} from "react";
+import React, {Component} from "react";
 import {Page} from "../site-components/Page";
 import Accordion from "../components/Accordion";
 import {Menu} from "../components/Menu";

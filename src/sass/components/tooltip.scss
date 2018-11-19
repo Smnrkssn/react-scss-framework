@@ -35,6 +35,18 @@
             transform: translateY(115%);
         }
 
+        &.center {
+            left: 50%;
+
+            &.top {
+                transform: translate(-50%, -115%);
+            }
+
+            &.bottom {
+                transform: translate(-50%, 115%);
+            }
+        }
+
         padding: 8px;
         font-size: 12px;
     }

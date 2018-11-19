@@ -16,7 +16,7 @@ class MessagesPage extends Component {
                 }}>
                     <Message
                         {...this.props.options}
-                        className={`${this.props.options.className} mb-15`}
+                        className={`${this.props.options.className}`}
                         heading={`Sample message`}
                         list={["Sample content"]}
                     />
