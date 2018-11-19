@@ -3,18 +3,29 @@ import {classNames, getOptionalClasses} from "../services/className";
 
 export const Grid = ({
     className,
+    columns,
+    rows,
+    dense,
+    autoFlow,
+    inline = false,
     gap = "15px",
     children,
     style = {},
     ...props
 }) => {
+    const isNumber = (value) => value && !isNaN(value);
+
     const gridClass = classNames({
         "grid": true,
-        ...getOptionalClasses(props)
+        [`grid-col-${columns}`]: isNumber(columns),
+        [`grid-row-${rows}`]: isNumber(rows),
+        "inline-grid": inline,
+        ...getOptionalClasses(props),
     }, className);
 
     const gridStyles = {
-        gridGap: gap,
+        gap: (isNumber(gap)) ? `${gap}px` : gap,
+        gridAutoFlow: autoFlow,
         ...style
     };
 

@@ -73,26 +73,15 @@
             text-align: center;
         }
     }
-}
 
-@each $name, $query in $mediaQueries {
-    @media (max-width: $query) {
-        .vertical-#{$name}{
-            flex-direction: column;
-        }
+    @each $name, $query in $mediaQueries {
+        @media (max-width: $query) {
+            &.vertical-#{$name}{
+                flex-direction: column;
+            }
 
-        .inline-#{$name} {
-            display: inline-flex;
-        }
-
-        .fixed-#{$name} {
-            position: fixed;
-            top: 0;
-            z-index: 1000;
-
-            &.scrollable {
-                max-height: 100vh;
-                overflow: auto;
+            &.inline-#{$name} {
+                display: inline-flex;
             }
         }
     }

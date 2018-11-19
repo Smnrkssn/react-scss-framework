@@ -1,7 +1,7 @@
 /*----------------------------------------
  * Positioning
  *----------------------------------------*/
-.fixed {
+@mixin fixed(){
     position: fixed;
     top: 0;
     left: 0;
@@ -13,128 +13,15 @@
     }
 }
 
-body.prevent-scroll {
-    overflow: hidden;
-    min-height: 100vh;
-}
+.fixed {
+    @include fixed();
 
-@each $name, $query in $mediaQueries {
-    @media (max-width: $query){
-        body.prevent-scroll-#{$name} {
-            overflow: hidden;
-            min-height: 100vh;
+    @each $name, $query in $mediaQueries {
+        @media (max-width: $query) {
+            &-#{$name} {
+                @include fixed();
+            }
         }
     }
 }
 
-@mixin normalizePosition(){
-    position: static;
-    bottom: initial;
-    left: initial;
-    right: initial;
-    z-index: 0;
-}
-
-@mixin positionCenter(){
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 3;
-}
-
-@mixin positionBottom(){
-    position: absolute;
-    bottom: 0;
-    z-index: 3;
-}
-
-@mixin positionBottomRight(){
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    z-index: 3;
-}
-
-@mixin positionTop(){
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 3;
-}
-
-@mixin positionTopRight(){
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 3;
-}
-
-.position-center {
-    @include positionCenter();
-}
-
-.position-bottom {
-    @include positionBottom();
-}
-
-.position-bottom-right {
-    @include positionBottomRight();
-}
-
-.position-top-right {
-    @include positionTopRight();
-}
-
-.position-top {
-    @include positionTop();
-}
-
-@each $name, $size in $mediaQueries {
-    .position-bottom-#{$name}{
-        @include normalizePosition();
-    }
-
-    .position-center-#{$name} {
-        @include normalizePosition();
-    }
-
-    .position-bottom-right-#{$name}{
-        @include normalizePosition();
-    }
-
-    .position-top-right-#{$name}{
-        @include normalizePosition();
-    }
-
-    .position-top-#{$name} {
-        @include normalizePosition();
-    }
-
-    @media(max-width: $size){
-        .static-#{$name}{
-            position: static!important;
-        }
-
-        .position-bottom-#{$name}{
-            @include positionBottom();
-        }
-
-        .position-center-#{$name} {
-            @include positionCenter();
-        }
-
-        .position-bottom-right-#{$name}{
-            @include positionBottomRight();
-        }
-
-        .position-top-right-#{$name}{
-            @include positionTopRight();
-        }
-
-        .position-top-#{$name} {
-            @include positionTop();
-        }
-    }
-}
