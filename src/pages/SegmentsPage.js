@@ -46,6 +46,29 @@ class SegmentsPage extends Component {
                         </Segment>
                     </Segment.List>
                 </SourceContainer>
+                <SourceContainer editorProps={{
+                    height: "200px"
+                }}>
+                    <Segment.List>
+                        <Segment className="gray bold" thinned>
+                            List item 2
+                        </Segment>
+                        <Segment thinned>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum
+                            dolor ex, eget venenatis nulla dictum nec. Vestibulum feugiat ut dolor
+                            vel hendrerit. Aliquam maximus, risus quis pellentesque porttitor, nibh
+                            enim lacinia velit, id aliquam leo odio eu dolor. Vestibulum tincidunt
+                            tristique ex at ultrices. Mauris vestibulum feugiat lorem elementum
+                            molestie. Vestibulum ante ipsum primis in faucibus orci luctus et
+                            ultrices posuere cubilia Curae; Praesent aliquet arcu quis luctus
+                            volutpat. Morbi non ante dui. Vestibulum elementum congue facilisis.
+                            Aliquam erat volutpat. Vestibulum dapibus pretium nunc at sagittis.
+                            Nunc sed metus nulla. Integer vitae eros rhoncus, pharetra justo ac,
+                            pretium tellus. Ut quis eleifend lectus, eu venenatis tellus. Integer
+                            massa dui, sodales non molestie interdum, venenatis at est.
+                        </Segment>
+                    </Segment.List>
+                </SourceContainer>
             </Page>
         );
     }
@@ -58,6 +81,8 @@ export default withOptionsForm({
     inline: false,
     hero: false,
     message: false,
+    thickened: false,
+    thinned: false,
     inset: false,
     light: false,
     dark: false,

@@ -5,6 +5,14 @@
     padding: 48px;
     width: 100%;
 
+    &.thinned {
+        padding: thinned(48px);
+    }
+
+    &.thickened {
+        padding: thickened(48px);
+    }
+
     &.loading::after {
         @include setLoadingSize("50px", "4px");
     }

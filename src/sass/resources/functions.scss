@@ -8,6 +8,14 @@
     @return $c;
 }
 
+@function thinned($padding){
+    @return $padding / 2;
+}
+
+@function thickened($padding){
+    @return $padding * 1.5;
+}
+
 /*----------------------------------------
  * Dark colors
  *----------------------------------------*/

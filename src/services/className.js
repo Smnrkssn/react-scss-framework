@@ -16,6 +16,8 @@ export const joinClassNames = (className1, className2 = "") =>{
 
 export const getOptionalClasses = ({
     disabled,
+    thickened,
+    thinned,
     segment,
     loading,
     padder,
@@ -34,6 +36,8 @@ export const getOptionalClasses = ({
 }) => ({
     "disabled": disabled,
     "segment": segment,
+    "thickened": thickened,
+    "thinned": thinned,
     "message": message,
     "inverted": inverted,
     "loading": loading,
@@ -55,6 +59,8 @@ export const getOptionalClasses = ({
 export const filterOutOptionalClasses = ({
     segment,
     loading,
+    thickened,
+    thinned,
     padder,
     inverted,
     message,

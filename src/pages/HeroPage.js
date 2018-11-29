@@ -54,6 +54,8 @@ export default withOptionsForm({
     className: "primary",
     loading: false,
     disabled: false,
+    thickened: false,
+    thinned: false,
     message: false,
     segment: false,
     inset: false,

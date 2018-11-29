@@ -18,6 +18,14 @@
     box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2);
     background-color: #FFF;
 
+    &.thinned {
+        padding: thinned(24px);
+    }
+
+    &.thickened {
+        padding: thickened(24px);
+    }
+
     hr {
         margin: 24px 0;
         border-top: 1px solid #ddd;
