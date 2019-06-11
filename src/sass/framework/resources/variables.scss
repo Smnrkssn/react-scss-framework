@@ -10,6 +10,7 @@ $gray      : #f3f5f7;
 //----------------------------------------------
 // Bootstrap Colors
 //----------------------------------------------
+$bLight     : #f8f9fa;
 $bBlue      : #007bff;
 $bIndigo    : #6610f2;
 $bPurple    : #6f42c1;
@@ -52,12 +53,13 @@ $darkColors: (
     (danger      $bDanger)
     (warning     $bWarning)
     (b-dark-gray $bDarkGray)
-    (info        $bInfo)
+    (b-info      $bInfo)
 );
 
 $lightColors: (
     (white $white)
     (gray  $gray)
+	(b-light $bLight)
 );
 
 $colors: join($darkColors, $lightColors);
