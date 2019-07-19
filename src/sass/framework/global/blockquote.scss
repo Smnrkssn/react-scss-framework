@@ -1,32 +1,20 @@
 @mixin blockquoteIcon($icon){
-    position: absolute;
     font-size: 20px;
     font-family: $fontAwesome;
     content: $icon;
     font-weight: 900;
-    color: #C6C6C6;
+    color: $gray-400;
 }
 
 blockquote {
-    position: relative;
-    display: inline-block;
-    margin: 0;
-    padding: 10px 50px;
-    border-radius: 5px;
-    border: 1px solid #fff;
-    box-shadow: 0 1px 3px #999, inset 0 0 30px #ededed;
-    font-size: $h6;
-    quotes: none;
+    padding: 24px 24px 24px 0;
+    margin: $standard-margin;
+    background-color: $gray-100;
 
     &::before {
+        padding: 24px calc(24px / 1.25);
+        margin-right: 12px;
+        background-color: $gray-200;
         @include blockquoteIcon("\f10d");
-        top: 5px;
-        left: 9px;
-    }
-
-    &::after {
-        @include blockquoteIcon("\f10e");
-        bottom: 5px;
-        right: 9px;
     }
 }

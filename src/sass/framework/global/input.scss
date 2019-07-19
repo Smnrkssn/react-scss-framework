@@ -24,25 +24,25 @@
 
 label {
     display: block;
-    margin: 0 0 3px 0;
+    margin: $label-margin;
     font-weight: bold;
 }
 
 @include allInputs(''){
-    margin: 0 0 15px 0;
+    margin: $input-margin;
     outline: 0;
-    padding: 10px 14px;
-    border: 1px solid rgba(34,36,38,.15);
-    border-radius: 5px;
-    box-shadow: 0 0 0 0 transparent inset;
-    transition: color .1s ease,border-color .1s ease;
+    padding: $input-padding;
+    border: $input-border;
+    border-radius: 0;
+    box-shadow: $input-box-shadow;
+    transition: $input-transition;
 
     &:not(.inline){
         width: 100%;
     }
 
     &::-webkit-input-placeholder {
-        color: rgba(0, 0, 0, .4);
+        color: $input-placeholder-color;
     }
 
     &:last-child {
@@ -50,24 +50,24 @@ label {
     }
 
     &:focus {
-        border-color: #85b7d9;
+        border-color: $input-focus-border-color;
     }
 
     &.error {
-        background: #fff6f6;
-        border-color: #e0b4b4;
-        color: #9f3a38;
+        background: $input-error-bg;
+        border-color: $input-error-border-color;
+        color: $input-error-color;
 
         &::-webkit-input-placeholder {
-            color: rgba(#9f3a38, .75);
+            color: rgba($input-error-color, .75);
         }
 
         &:focus {
-            border-color: darken(#e0b4b4, 10%);
+            border-color: darken($input-error-border-color, 10%);
         }
     }
 
     &:disabled {
-        background-color: #f6f6f6;
+        background-color: $input-disabled-bg;
     }
 }

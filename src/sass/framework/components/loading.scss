@@ -24,7 +24,7 @@
         position: absolute;
         @include setLoadingSize();
         animation: loader-spin .5s infinite linear;
-        border: 2px solid #000;
+        border: $loading-border;
         border-radius: 100%;
         border-right-color: transparent;
         border-top-color: transparent;

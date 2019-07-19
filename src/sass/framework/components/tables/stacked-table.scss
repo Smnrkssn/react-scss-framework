@@ -4,7 +4,6 @@
 @mixin stackedTable(){
     border: 1px solid $tableSecondary;
     border-collapse: separate;
-    border-radius: $divider5;
     border-spacing: 0;
     width: 100%;
     text-align: center;

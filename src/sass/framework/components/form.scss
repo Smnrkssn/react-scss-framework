@@ -2,10 +2,10 @@
  * Form
  *----------------------------------------*/
 .form {
-    font-size: $h6;
+    font-size: $form-font-size;
 
     .columns {
-        padding-right: $divider3;
+        padding-right: $form-columns-padding-right;
 
         .column {
             padding-top: 0;

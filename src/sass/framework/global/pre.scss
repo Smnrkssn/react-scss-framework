@@ -1,8 +1,8 @@
 pre {
-    padding: 8px;
-    margin: 0 0 8px;
+    margin: $pre-margin;
+    padding: $pre-padding;
     word-break: break-all;
     word-wrap: break-word;
-    background-color: #fafafa;
-    border: 1px solid #e5e5e5;
+    background-color: $pre-bg;
+    border: $pre-border;
 }

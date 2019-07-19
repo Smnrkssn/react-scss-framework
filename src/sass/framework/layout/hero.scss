@@ -2,15 +2,15 @@
  * Hero
  *----------------------------------------*/
 .hero {
-    padding: 48px;
+    padding: $hero-padding;
     width: 100%;
 
     &.thinned {
-        padding: thinned(48px);
+        padding: thinned($hero-padding);
     }
 
     &.thickened {
-        padding: thickened(48px);
+        padding: thickened($hero-padding);
     }
 
     &.loading::after {

@@ -1,0 +1,63 @@
+//----------------------------------------------
+// Framework variables
+//----------------------------------------------
+$standard-padding: 20px;
+$medium-padding: $standard-padding / 1.5;
+$small-padding: $standard-padding / 2;
+$tiny-padding: $standard-padding / 3;
+$standard-margin: 0 0 1em 0;
+$standard-border: 1px solid $gray-300;
+
+$segment-padding: $standard-padding;
+$segment-box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2);
+$segment-bg: $white;
+$segment-hr: 1px solid $gray-300;
+
+$hero-padding: $standard-padding * 2;
+
+$message-padding: $medium-padding $standard-padding;
+
+$button-padding: $small-padding $medium-padding;
+
+$tablePrimary: rgba(0, 0, 50, .03);
+$tableSecondary: #E9E9E9;
+
+$tooltip-padding: $tiny-padding;
+$tooltip-font-size: 12px;
+$tooltip-z-index: 999;
+
+$fixed-z-index: 1000;
+
+$input-margin: $standard-margin;
+$input-border: $standard-border;
+$input-box-shadow: 0 0 0 0 transparent inset;
+$input-transition: color .1s ease, border-color .1s ease;
+$input-padding: $small-padding $medium-padding;
+$input-placeholder-color: rgba(0, 0, 0, .4);
+$input-focus-border-color: $bPrimary;
+$input-error-border-color: #e0b4b4;
+$input-error-bg: #fff6f6;
+$input-error-color: $bDanger;
+$input-disabled-bg: $gray-100;
+$label-margin: 0 0 .5em 0;
+
+$form-font-size: $h6;
+$form-columns-padding-right: $divider3;
+
+$loading-border: 2px solid #000;
+$loader-huge-size: 120;
+$loader-large-size: 80;
+$loader-medium-size: 60;
+$loader-small-size: 40;
+$loader-tiny-size: 20;
+
+$blockquote-margin: $standard-margin;
+$blockquote-padding: $standard-padding;
+$blockquote-bg: $gray-100;
+$blockquote-icon-bg: $gray-200;
+$blockquote-color: $gray-400;
+
+$pre-padding: $standard-padding / 2;
+$pre-margin: $standard-margin;
+$pre-bg: $gray-100;
+$pre-border: $standard-border;

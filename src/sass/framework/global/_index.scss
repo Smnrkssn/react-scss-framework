@@ -1,0 +1,30 @@
+/*----------------------------------------
+ * Global
+ *----------------------------------------*/
+*,
+html,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    font-family: $primaryFont;
+}
+
+img {
+    max-width: 100%;
+}
+
+hr {
+    border-top: 1px solid $gray;
+}
+
+@import "text.scss";
+@import "blockquote.scss";
+@import "progress.scss";
+@import "code.scss";
+@import "pre.scss";
+@import "article.scss";
+@import "input.scss";

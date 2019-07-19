@@ -16,6 +16,10 @@
     @return $padding * 1.5;
 }
 
+@function matchToColor($match, $color){
+    @return hsl(hue($match), saturation($color), lightness($color));
+}
+
 /*----------------------------------------
  * Dark colors
  *----------------------------------------*/

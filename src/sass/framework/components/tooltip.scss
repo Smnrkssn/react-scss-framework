@@ -7,7 +7,9 @@
 
     .tooltip {
         position: absolute;
-        z-index: 999;
+        z-index: $tooltip-z-index;
+        padding: $tooltip-padding;
+        font-size: $tooltip-font-size;
 
         &.loading:after {
             @include setLoadingSize("15px", "2px");
@@ -46,8 +48,5 @@
                 transform: translate(-50%, 115%);
             }
         }
-
-        padding: 8px;
-        font-size: 12px;
     }
 }

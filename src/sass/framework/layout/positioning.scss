@@ -5,12 +5,18 @@
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1000;
+    right: 0;
+    z-index: $fixed-z-index;
 
     &.scrollable {
         max-height: 100vh;
         overflow: auto;
     }
+}
+
+.sticky {
+    position: sticky;
+    top: 0;
 }
 
 .fixed {
@@ -29,6 +35,11 @@
 
         .static-#{$name}{
             position: static;
+        }
+
+        .sticky-#{$name}{
+            position: sticky;
+            top: 0;
         }
     }
 }
